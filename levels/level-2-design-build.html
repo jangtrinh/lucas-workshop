@@ -57,18 +57,20 @@
       <div class="session-divider" id="session-2-1"></div>
       <h2>2.1 DESIGN SYSTEMS WITH AI</h2>
 
-      <div class="audio-guide" role="region" aria-label="Audio guide session 2.1">
-        <div class="audio-label"><i class="ph ph-headphones"></i> SESSION 2.1 — AUDIO GUIDE</div>
+      <div class="audio-guide" role="region" aria-label="Session 2.1 intro">
+        <div class="audio-label"><i class="ph ph-headphones"></i> SESSION 2.1</div>
         <audio controls preload="none" style="width:100%">
           <source src="../audio/session_2_1.wav" type="audio/wav">
         </audio>
-        <details class="transcript"><summary>TRANSCRIPT</summary>
-<p><strong>Intro:</strong> Session 2.1. Design Systems với AI.</p>
-<p><strong>Hook:</strong> Một founder solo đã tính lại thời gian. Hơn mười tiếng mỗi tuần, chỉ để sửa CSS không nhất quán. Mỗi trang AI tạo ra dùng màu khác, spacing khác, kiểu nút khác. Giải pháp có vẻ hiển nhiên: viết prompt chi tiết hơn. Nhưng giải pháp thực sự chỉ là tám mươi bảy dòng CSS variables, cộng thêm một trang quy tắc. Setup mất ba tiếng. Sau đó? Bốn mươi giờ mỗi tháng sửa CSS, giảm về zero.</p>
-<p><strong>Khái niệm:</strong> Khái niệm chính là design tokens. Thay vì để AI đoán nên dùng màu xám nào, bạn định nghĩa sẵn. Ví dụ: màu phụ là slate, mã 4E4B66. Khi bạn nói AI dùng slate cho text phụ, nó sẽ dùng đúng. Khi bạn nói dùng màu xám xám, mỗi lần nó sẽ chọn một màu khác. Ngoài màu sắc, bạn cần định nghĩa typography, spacing scale, và component vocabulary. Tất cả gói gọn trong một file CSS duy nhất, dưới một trăm năm mươi dòng.</p>
-<p><strong>Insight:</strong> Năm 1977, kiến trúc sư Christopher Alexander xuất bản cuốn A Pattern Language. Ý tưởng rất đơn giản: mỗi thành phần trong kiến trúc đều có tên, ngữ cảnh sử dụng, và quy tắc. Áp dụng vào thiết kế UI cũng vậy. Mỗi component có class name, hoàn cảnh dùng, và styling rules. Khi AI biết vocabulary này, nó sẽ dùng đúng component cho đúng tình huống.</p>
-<p><strong>Bài tập:</strong> Tạo một file shared.CSS cho dự án của bạn. Bao gồm: tối đa sáu color tokens, hệ thống typography với ba cỡ chữ, spacing scale ít nhất năm giá trị, và ba component class có đầy đủ style. File phải dưới một trăm năm mươi dòng. Sau khi tạo xong, thử cho AI generate một trang mới sử dụng file CSS này. Nếu trang mới trông nhất quán với các trang cũ, bạn đã thành công.</p>
-        </details>
+        <details class="transcript"><summary>TRANSCRIPT</summary><p>Session 2.1. Design Systems với AI.</p></details>
+      </div>
+
+      <div class="audio-guide" role="region" aria-label="Session 2.1 hook">
+        <div class="audio-label"><i class="ph ph-headphones"></i> NGHE — ATTENTION HOOK</div>
+        <audio controls preload="none" style="width:100%">
+          <source src="../audio/session_2_1_hook.wav" type="audio/wav">
+        </audio>
+        <details class="transcript"><summary>TRANSCRIPT</summary><p>Một founder solo đã tính lại thời gian. Hơn mười tiếng mỗi tuần, chỉ để sửa CSS không nhất quán. Mỗi trang AI tạo ra dùng màu khác, spacing khác, kiểu nút khác. Giải pháp có vẻ hiển nhiên: viết prompt chi tiết hơn. Nhưng giải pháp thực sự chỉ là tám mươi bảy dòng CSS variables, cộng thêm một trang quy tắc. Setup mất ba tiếng. Sau đó? Bốn mươi giờ mỗi tháng sửa CSS, giảm về zero.</p></details>
       </div>
 
       <div class="why">
@@ -90,6 +92,13 @@
       </table>
 
       <h3>Core Concept: Design Tokens</h3>
+      <div class="audio-guide" role="region" aria-label="Session 2.1 concept">
+        <div class="audio-label"><i class="ph ph-headphones"></i> NGHE — KHÁI NIỆM CHÍNH</div>
+        <audio controls preload="none" style="width:100%">
+          <source src="../audio/session_2_1_concept.wav" type="audio/wav">
+        </audio>
+        <details class="transcript"><summary>TRANSCRIPT</summary><p>Khái niệm chính là design tokens. Thay vì để AI đoán nên dùng màu xám nào, bạn định nghĩa sẵn. Ví dụ: màu phụ là slate, mã 4E4B66. Khi bạn nói AI dùng slate cho text phụ, nó sẽ dùng đúng. Khi bạn nói dùng màu xám xám, mỗi lần nó sẽ chọn một màu khác. Ngoài màu sắc, bạn cần định nghĩa typography, spacing scale, và component vocabulary. Tất cả gói gọn trong một file CSS duy nhất, dưới một trăm năm mươi dòng.</p></details>
+      </div>
       <p>Design tokens are <strong>named variables</strong> that replace hardcoded values. Instead of AI guessing "what shade of gray?", it uses your defined <code>--slate: #4E4B66</code>.</p>
 
       <div class="code-block">
@@ -124,6 +133,14 @@
 
       <p><strong>Key insight:</strong> When you tell AI "use <code>--slate</code> for secondary text", it does. When you tell AI "use a grayish color", it invents a different gray every time.</p>
 
+      <div class="audio-guide" role="region" aria-label="Session 2.1 insight">
+        <div class="audio-label"><i class="ph ph-headphones"></i> NGHE — CROSS-DOMAIN INSIGHT</div>
+        <audio controls preload="none" style="width:100%">
+          <source src="../audio/session_2_1_insight.wav" type="audio/wav">
+        </audio>
+        <details class="transcript"><summary>TRANSCRIPT</summary><p>Năm 1977, kiến trúc sư Christopher Alexander xuất bản cuốn A Pattern Language. Ý tưởng rất đơn giản: mỗi thành phần trong kiến trúc đều có tên, ngữ cảnh sử dụng, và quy tắc. Áp dụng vào thiết kế UI cũng vậy. Mỗi component có class name, hoàn cảnh dùng, và styling rules. Khi AI biết vocabulary này, nó sẽ dùng đúng component cho đúng tình huống.</p></details>
+      </div>
+
       <div class="insight">
         <div class="insight-label"><i class="ph ph-book-open"></i> CROSS-DOMAIN — ARCHITECTURE'S PATTERN LANGUAGE</div>
         <p>In 1977, Christopher Alexander published <em>A Pattern Language</em> — every building element has a NAME, a CONTEXT (when to use it), and a RULE (how). Apply the same: each design component has a class name, a usage context, and styling rules.</p>
@@ -151,6 +168,14 @@
           <div class="avoid-label"><i class="ph ph-x-circle"></i> AVOID THIS</div>
           <p>Don't let AI use inline <code>style=""</code> attributes when a CSS class exists. Inline styles bypass your design system and guarantee inconsistency.</p>
         </div>
+      </div>
+
+      <div class="audio-guide" role="region" aria-label="Session 2.1 exercise">
+        <div class="audio-label"><i class="ph ph-headphones"></i> NGHE — BÀI TẬP</div>
+        <audio controls preload="none" style="width:100%">
+          <source src="../audio/session_2_1_exercise.wav" type="audio/wav">
+        </audio>
+        <details class="transcript"><summary>TRANSCRIPT</summary><p>Tạo một file shared.CSS cho dự án của bạn. Bao gồm: tối đa sáu color tokens, hệ thống typography với ba cỡ chữ, spacing scale ít nhất năm giá trị, và ba component class có đầy đủ style. File phải dưới một trăm năm mươi dòng. Sau khi tạo xong, thử cho AI generate một trang mới sử dụng file CSS này. Nếu trang mới trông nhất quán với các trang cũ, bạn đã thành công.</p></details>
       </div>
 
       <div class="reflection" id="exercise-2-1">
@@ -187,17 +212,20 @@
       <div class="session-divider" id="session-2-2"></div>
       <h2>2.2 FROM SPEC TO PROTOTYPE</h2>
 
-      <div class="audio-guide" role="region" aria-label="Audio guide session 2.2">
-        <div class="audio-label"><i class="ph ph-headphones"></i> SESSION 2.2 — AUDIO GUIDE</div>
+      <div class="audio-guide" role="region" aria-label="Session 2.2 intro">
+        <div class="audio-label"><i class="ph ph-headphones"></i> SESSION 2.2</div>
         <audio controls preload="none" style="width:100%">
           <source src="../audio/session_2_2.wav" type="audio/wav">
         </audio>
-        <details class="transcript"><summary>TRANSCRIPT</summary>
-<p><strong>Intro:</strong> Session 2.2. Từ Spec đến Prototype.</p>
-<p><strong>Hook:</strong> Một đội sản phẩm ở Y Combinator đã thử thách nhau. Từ phác thảo trên giấy đến prototype HTML hoàn chỉnh, trong hai giờ. Với design system, AI, và brief có cấu trúc, họ luôn đạt được. Không có những thứ đó? Trung bình mất hai ngày. Sự khác biệt không phải là tài năng. Là sự chuẩn bị.</p>
-<p><strong>Khái niệm:</strong> Quy trình gồm bốn bước. Bước một, viết spec rõ ràng. Định nghĩa mục tiêu trang, user flow, và các component cần dùng. Bước hai, chạy validation checklist trước khi code. Năm câu hỏi kiểm tra: data flow đã rõ chưa? Edge case đã tính chưa? Bước ba, generate HTML bằng AI với design system đã load sẵn. Bước bốn, review kết quả và fix lỗi nhỏ. Bước hai là bước quan trọng nhất. Nó giống như checklist trước khi cất cánh của phi công. Chuyên gia cũng quên chi tiết dưới áp lực. Checklist ngăn điều đó.</p>
-<p><strong>Bài tập:</strong> Chọn một trang bạn cần xây cho dự án thực. Viết spec theo format đã học, rồi chạy validation checklist năm điểm. Sau đó dùng AI generate HTML prototype. Mục tiêu: hoàn thành trong chín mươi phút. Kết quả cần pass ít nhất bốn trên năm điểm validation ngay lần đầu.</p>
-        </details>
+        <details class="transcript"><summary>TRANSCRIPT</summary><p>Session 2.2. Từ Spec đến Prototype.</p></details>
+      </div>
+
+      <div class="audio-guide" role="region" aria-label="Session 2.2 hook">
+        <div class="audio-label"><i class="ph ph-headphones"></i> NGHE — ATTENTION HOOK</div>
+        <audio controls preload="none" style="width:100%">
+          <source src="../audio/session_2_2_hook.wav" type="audio/wav">
+        </audio>
+        <details class="transcript"><summary>TRANSCRIPT</summary><p>Một đội sản phẩm ở Y Combinator đã thử thách nhau. Từ phác thảo trên giấy đến prototype HTML hoàn chỉnh, trong hai giờ. Với design system, AI, và brief có cấu trúc, họ luôn đạt được. Không có những thứ đó? Trung bình mất hai ngày. Sự khác biệt không phải là tài năng. Là sự chuẩn bị.</p></details>
       </div>
 
       <div class="why">
@@ -207,6 +235,13 @@
       </div>
 
       <h3>Core Concept: The Spec-to-HTML Pipeline</h3>
+      <div class="audio-guide" role="region" aria-label="Session 2.2 concept">
+        <div class="audio-label"><i class="ph ph-headphones"></i> NGHE — KHÁI NIỆM CHÍNH</div>
+        <audio controls preload="none" style="width:100%">
+          <source src="../audio/session_2_2_concept.wav" type="audio/wav">
+        </audio>
+        <details class="transcript"><summary>TRANSCRIPT</summary><p>Quy trình gồm bốn bước. Bước một, viết spec rõ ràng. Định nghĩa mục tiêu trang, user flow, và các component cần dùng. Bước hai, chạy validation checklist trước khi code. Năm câu hỏi kiểm tra: data flow đã rõ chưa? Edge case đã tính chưa? Bước ba, generate HTML bằng AI với design system đã load sẵn. Bước bốn, review kết quả và fix lỗi nhỏ. Bước hai là bước quan trọng nhất. Nó giống như checklist trước khi cất cánh của phi công. Chuyên gia cũng quên chi tiết dưới áp lực. Checklist ngăn điều đó.</p></details>
+      </div>
       <div class="code-block">
         <button class="copy-btn" onclick="copyCode(this)">COPY</button>
 <pre>┌────────────┐     ┌────────────┐     ┌────────────┐     ┌────────────┐
@@ -264,6 +299,14 @@
         </div>
       </div>
 
+      <div class="audio-guide" role="region" aria-label="Session 2.2 exercise">
+        <div class="audio-label"><i class="ph ph-headphones"></i> NGHE — BÀI TẬP</div>
+        <audio controls preload="none" style="width:100%">
+          <source src="../audio/session_2_2_exercise.wav" type="audio/wav">
+        </audio>
+        <details class="transcript"><summary>TRANSCRIPT</summary><p>Chọn một trang bạn cần xây cho dự án thực. Viết spec theo format đã học, rồi chạy validation checklist năm điểm. Sau đó dùng AI generate HTML prototype. Mục tiêu: hoàn thành trong chín mươi phút. Kết quả cần pass ít nhất bốn trên năm điểm validation ngay lần đầu.</p></details>
+      </div>
+
       <div class="reflection" id="exercise-2-2">
         <div class="reflection-label"><i class="ph ph-pencil-simple"></i> EXERCISE</div>
         <h3>Spec to Prototype in 90 Minutes</h3>
@@ -298,17 +341,20 @@
       <div class="session-divider" id="session-2-3"></div>
       <h2>2.3 SHIP PRODUCTION CODE</h2>
 
-      <div class="audio-guide" role="region" aria-label="Audio guide session 2.3">
-        <div class="audio-label"><i class="ph ph-headphones"></i> SESSION 2.3 — AUDIO GUIDE</div>
+      <div class="audio-guide" role="region" aria-label="Session 2.3 intro">
+        <div class="audio-label"><i class="ph ph-headphones"></i> SESSION 2.3</div>
         <audio controls preload="none" style="width:100%">
           <source src="../audio/session_2_3.wav" type="audio/wav">
         </audio>
-        <details class="transcript"><summary>TRANSCRIPT</summary>
-<p><strong>Intro:</strong> Session cuối cùng, 2.3. Ship Production Code.</p>
-<p><strong>Hook:</strong> Bạn đã bao giờ tạo xong prototype, mọi thứ đẹp trên máy mình, nhưng khi đưa lên mạng thì hỏng chưa? Link sai. Hình không load. Font khác. Responsive bể. Đó là khoảng cách giữa works on my machine và production. Khoảng cách này không phải ngẫu nhiên. Nó có hệ thống. Và nó có checklist.</p>
-<p><strong>Khái niệm:</strong> Quy trình hardening gồm tám điểm. Kiểm tra relative paths. Kiểm tra responsive. Kiểm tra accessibility. Kiểm tra CDN và font loading. Kiểm tra navigation links. Kiểm tra meta tags. Kiểm tra performance. Và cuối cùng, test trên thiết bị thật. Sau khi pass tám điểm, bạn khởi tạo Git, push lên GitHub, và bật GitHub Pages. Từ lúc thay đổi code đến lúc website cập nhật, dưới hai phút. Đó là CI/CD, tự động từ code đến production.</p>
-<p><strong>Bài tập:</strong> Bài tập cuối cùng của workshop. Lấy prototype bạn đã tạo ở session trước. Chạy checklist tám điểm. Fix tất cả lỗi tìm được. Khởi tạo Git repo. Push lên GitHub. Bật GitHub Pages. Mục tiêu: website live trên internet, có thể chia sẻ link cho người khác. Chu trình thay đổi đến deploy dưới hai phút.</p>
-        </details>
+        <details class="transcript"><summary>TRANSCRIPT</summary><p>Session cuối cùng, 2.3. Ship Production Code.</p></details>
+      </div>
+
+      <div class="audio-guide" role="region" aria-label="Session 2.3 hook">
+        <div class="audio-label"><i class="ph ph-headphones"></i> NGHE — ATTENTION HOOK</div>
+        <audio controls preload="none" style="width:100%">
+          <source src="../audio/session_2_3_hook.wav" type="audio/wav">
+        </audio>
+        <details class="transcript"><summary>TRANSCRIPT</summary><p>Bạn đã bao giờ tạo xong prototype, mọi thứ đẹp trên máy mình, nhưng khi đưa lên mạng thì hỏng chưa? Link sai. Hình không load. Font khác. Responsive bể. Đó là khoảng cách giữa works on my machine và production. Khoảng cách này không phải ngẫu nhiên. Nó có hệ thống. Và nó có checklist.</p></details>
       </div>
 
       <div class="why">
@@ -322,6 +368,13 @@
       <p>These errors happen because iteration is <strong>uncontrolled</strong> — you fix one thing, break another. Production workflow: test before deploy, version changes, never push untested code.</p>
 
       <h3>Core Concept: The 8-Point Hardening Checklist</h3>
+      <div class="audio-guide" role="region" aria-label="Session 2.3 concept">
+        <div class="audio-label"><i class="ph ph-headphones"></i> NGHE — KHÁI NIỆM CHÍNH</div>
+        <audio controls preload="none" style="width:100%">
+          <source src="../audio/session_2_3_concept.wav" type="audio/wav">
+        </audio>
+        <details class="transcript"><summary>TRANSCRIPT</summary><p>Quy trình hardening gồm tám điểm. Kiểm tra relative paths. Kiểm tra responsive. Kiểm tra accessibility. Kiểm tra CDN và font loading. Kiểm tra navigation links. Kiểm tra meta tags. Kiểm tra performance. Và cuối cùng, test trên thiết bị thật. Sau khi pass tám điểm, bạn khởi tạo Git, push lên GitHub, và bật GitHub Pages. Từ lúc thay đổi code đến lúc website cập nhật, dưới hai phút. Đó là CI/CD, tự động từ code đến production.</p></details>
+      </div>
       <div class="code-block">
         <button class="copy-btn" onclick="copyCode(this)">COPY</button>
 <pre>CRITICAL (must pass before deploy):
@@ -406,6 +459,14 @@ jobs:
           path: '.'
       - id: deployment
         uses: actions/deploy-pages@v4</pre>
+      </div>
+
+      <div class="audio-guide" role="region" aria-label="Session 2.3 exercise">
+        <div class="audio-label"><i class="ph ph-headphones"></i> NGHE — BÀI TẬP</div>
+        <audio controls preload="none" style="width:100%">
+          <source src="../audio/session_2_3_exercise.wav" type="audio/wav">
+        </audio>
+        <details class="transcript"><summary>TRANSCRIPT</summary><p>Bài tập cuối cùng của workshop. Lấy prototype bạn đã tạo ở session trước. Chạy checklist tám điểm. Fix tất cả lỗi tìm được. Khởi tạo Git repo. Push lên GitHub. Bật GitHub Pages. Mục tiêu: website live trên internet, có thể chia sẻ link cho người khác. Chu trình thay đổi đến deploy dưới hai phút.</p></details>
       </div>
 
       <div class="reflection" id="exercise-2-3">

@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Level 4: Automation &amp; Career — Build systems that work while you sleep.">
+  <title>Level 4: Automation &amp; Career — Workshop</title>
+  <link rel="stylesheet" href="../shared.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+  <div class="layout">
+    <nav class="sidebar">
+      <div class="sidebar-brand">
+        <h2>Workshop</h2>
+        <p>AI-Powered PM</p>
+      </div>
+      <div class="nav-group">
+        <div class="nav-label">Modules</div>
+        <a href="../index.html" class="nav-link"><i class="ph ph-arrow-left"></i> Hub</a>
+        <a href="level-1-ai-workflow.html" class="nav-link"><span class="nav-stage-num">1</span> AI Workflow</a>
+        <a href="level-2-design-build.html" class="nav-link"><span class="nav-stage-num">2</span> Design &amp; Build</a>
+        <a href="level-3-content-creation.html" class="nav-link"><span class="nav-stage-num">3</span> Content Creation</a>
+        <a href="level-4-automation-career.html" class="nav-link active"><span class="nav-stage-num">4</span> Automation &amp; Career</a>
+      </div>
+      <div class="nav-group">
+        <div class="nav-label">Sessions</div>
+        <a href="#session-4-1" class="nav-link">4.1 AI Agents</a>
+        <a href="#session-4-2" class="nav-link">4.2 Career Pipeline</a>
+        <a href="#session-4-3" class="nav-link">4.3 AI Orchestrator</a>
+        <a href="#quiz" class="nav-link">Self-Check Quiz</a>
+      </div>
+    </nav>
+
+    <main class="main">
+      <h1>Automation &amp; Career</h1>
+      <p class="subtitle">Level 4 &middot; Build systems that work while you sleep</p>
+
+      <div class="audio-guide" role="region" aria-label="Level 4 intro narration">
+        <div class="audio-label"><i class="ph ph-headphones"></i> LEVEL 4 — INTRO</div>
+        <audio controls preload="none" style="width:100%">
+          <source src="../audio/level_4_intro.wav" type="audio/wav">
+        </audio>
+        <details class="transcript"><summary>TRANSCRIPT</summary><p>Chào mừng đến với Level 4 — level cuối cùng. Automation và Career. Ở level này, bạn sẽ xây AI agents để tự động hóa các công việc lặp đi lặp lại, tạo career pipeline để tạo ra tailored assets cho bất kỳ job posting nào, và orchestrate tất cả các AI capabilities thành một workflow thống nhất. Đây là capstone — mọi thứ từ Level 1 đến 3 đều kết nối lại ở đây.</p></details>
+      </div>
+
+      <div class="objectives">
+        <div class="objectives-title"><i class="ph ph-target"></i> LEARNING OBJECTIVES</div>
+        <ol>
+          <li>Build an AI agent that automates repetitive PM tasks using function calling</li>
+          <li>Create a career pipeline that generates tailored assets for any job posting</li>
+          <li>Orchestrate multiple AI capabilities into one unified workflow</li>
+        </ol>
+      </div>
+
+      <!-- ═══════════════════════════════════════ -->
+      <!-- SESSION 4.1 -->
+      <!-- ═══════════════════════════════════════ -->
+      <div class="session-divider" id="session-4-1"></div>
+      <h2>4.1 AI AGENTS FOR REPETITIVE WORK</h2>
+
+      <div class="audio-guide" role="region" aria-label="Session 4.1 intro">
+        <div class="audio-label"><i class="ph ph-headphones"></i> SESSION 4.1</div>
+        <audio controls preload="none" style="width:100%">
+          <source src="../audio/session_4_1.wav" type="audio/wav">
+        </audio>
+        <details class="transcript"><summary>TRANSCRIPT</summary><p>Session 4.1. AI Agents cho công việc lặp đi lặp lại. Stop doing what AI can do for you.</p></details>
+      </div>
+
+      <div class="audio-guide" role="region" aria-label="Session 4.1 hook">
+        <div class="audio-label"><i class="ph ph-headphones"></i> NGHE — ATTENTION HOOK</div>
+        <audio controls preload="none" style="width:100%">
+          <source src="../audio/session_4_1_hook.wav" type="audio/wav">
+        </audio>
+        <details class="transcript"><summary>TRANSCRIPT</summary><p>Một PM theo dõi công việc hàng tuần của mình và phát hiện ra bốn mươi phần trăm là công việc lặp đi lặp lại: status updates, meeting notes, ticket triage, report formatting. Đó là mười sáu tiếng mỗi tuần mà máy có thể làm. PM đó xây ba agents đơn giản: một cho meeting summaries, một cho ticket categorization, một cho weekly reports. Thời gian tiết kiệm được: mười hai tiếng mỗi tuần. Tương đương hai mươi bốn nghìn đô la tiết kiệm mỗi năm.</p></details>
+      </div>
+
+      <div class="why">
+        <div class="why-label">ATTENTION HOOK — 12 HOURS RECLAIMED PER WEEK</div>
+        <p>A PM tracked their weekly tasks: <strong>40% was repetitive</strong> — status updates, meeting notes, ticket triage, report formatting. That's 16 hours/week of work a machine could do.</p>
+        <p>The PM built 3 simple agents: one for meeting summaries, one for ticket categorization, one for weekly reports. Time reclaimed: <strong>12 hours/week</strong>. Salary equivalent saved: <strong>$24,000/year</strong>.</p>
+      </div>
+
+      <h3>Why This Matters</h3>
+      <p>Lucas's pain — PM time eaten by repetitive tasks. Every hour spent on copy-paste work is an hour NOT spent on strategy, user research, or product decisions. The ceiling isn't skill — it's hours.</p>
+
+      <h3>Core Concept: The Agent Pattern</h3>
+
+      <div class="audio-guide" role="region" aria-label="Session 4.1 concept">
+        <div class="audio-label"><i class="ph ph-headphones"></i> NGHE — KHÁI NIỆM CHÍNH</div>
+        <audio controls preload="none" style="width:100%">
+          <source src="../audio/session_4_1_concept.wav" type="audio/wav">
+        </audio>
+        <details class="transcript"><summary>TRANSCRIPT</summary><p>Agent Pattern có bốn bước. Trigger: sự kiện xảy ra — email mới, ticket mới, hoặc theo lịch. Decide: AI đọc context và quyết định phải làm gì. Execute: Function Calling kích hoạt các hành động thực tế trong hệ thống thật. Report: Structured Output JSON được lưu vào knowledge base. Ba khả năng Gemini quan trọng: Function Calling cho phép AI gọi các APIs của bạn, Code Execution chạy Python trong sandbox miễn phí, và Structured Output đảm bảo format JSON nhất quán.</p></details>
+      </div>
+
+      <div class="code-block">
+        <button class="copy-btn" onclick="copyCode(this)">COPY</button>
+<pre>TRIGGER           DECIDE              EXECUTE           REPORT
+┌─────────┐      ┌──────────┐       ┌──────────┐      ┌──────────┐
+│ Event    │─────▶│ AI reads │──────▶│ Function │─────▶│ Structured│
+│ happens  │      │ context  │       │ Calling  │      │ Output   │
+│          │      │ + decides│       │ runs     │      │ (JSON)   │
+│ New email│      │ what to  │       │ real     │      │ saved to │
+│ New ticket│     │ do       │       │ actions  │      │ your KB  │
+│ Schedule │      │          │       │          │      │          │
+└─────────┘      └──────────┘       └──────────┘      └──────────┘
+
+Key Gemini capabilities:
+  Function Calling   → Model outputs structured calls to YOUR APIs.
+                       You define the functions, AI decides when/how to call them.
+  Code Execution     → Python sandbox for data processing, calculations, chart generation.
+                       FREE, no setup required.
+  Structured Output  → JSON schema enforcement — agent always returns predictable format.</pre>
+      </div>
+
+      <div class="audio-guide" role="region" aria-label="Session 4.1 insight">
+        <div class="audio-label"><i class="ph ph-headphones"></i> NGHE — CROSS-DOMAIN INSIGHT</div>
+        <audio controls preload="none" style="width:100%">
+          <source src="../audio/session_4_1_insight.wav" type="audio/wav">
+        </audio>
+        <details class="transcript"><summary>TRANSCRIPT</summary><p>Henry Ford không tăng tốc độ tay nghề thủ công xây xe hơi. Ông tạo ra dây chuyền lắp ráp — mỗi trạm chỉ làm một việc duy nhất. AI agents hoạt động theo cùng nguyên tắc đó: mỗi agent có một nhiệm vụ, một trigger, một output format. Kết nối chúng lại để tạo ra workflows phức tạp.</p></details>
+      </div>
+
+      <div class="insight">
+        <div class="insight-label"><i class="ph ph-factory"></i> CROSS-DOMAIN — MANUFACTURING (FORD ASSEMBLY LINE)</div>
+        <p>Henry Ford didn't speed up hand-building cars. He created an assembly line where each station does <strong>ONE task</strong>. AI agents work the same way — each agent has one job, one trigger, one output format. Chain them for complex workflows.</p>
+      </div>
+
+      <h3>Approach Comparison</h3>
+      <table>
+        <tr><th>Approach</th><th>Setup</th><th>Time Saved/Week</th><th>Reliability</th></tr>
+        <tr><td>Do it yourself</td><td>0</td><td>0 hours</td><td>N/A</td></tr>
+        <tr><td>AI chat assistant</td><td>10 min</td><td>3–5 hours</td><td>Low (manual trigger)</td></tr>
+        <tr><td><strong>AI Agent (function calling)</strong></td><td><strong>2–4 hours (once)</strong></td><td><strong>10–15 hours</strong></td><td><strong>High (auto-trigger)</strong></td></tr>
+      </table>
+
+      <h3>Tool Breakdown</h3>
+      <table>
+        <tr><th>Capability</th><th>What It Does</th><th>When To Use</th></tr>
+        <tr><td>Function Calling</td><td>Call external APIs (Slack, Jira, email)</td><td>Automating actions</td></tr>
+        <tr><td>Code Execution</td><td>Run Python in sandbox (charts, calculations)</td><td>Data processing</td></tr>
+        <tr><td>Structured Output</td><td>Force JSON format for predictable output</td><td>All agent responses</td></tr>
+        <tr><td>Extended Thinking</td><td>Deep reasoning before acting</td><td>Complex decisions</td></tr>
+      </table>
+
+      <div class="best-practice">
+        <div class="best-practice-label"><i class="ph ph-check-circle"></i> BEST PRACTICE</div>
+        <div class="do-this">
+          <div class="do-label"><i class="ph ph-check-circle"></i> DO THIS</div>
+          <p>Start with the <strong>MOST repetitive task</strong> (highest frequency, lowest complexity). Build one agent. Validate it works for 1 week. Then build the next.</p>
+        </div>
+        <div class="avoid-this">
+          <div class="avoid-label"><i class="ph ph-x-circle"></i> AVOID THIS</div>
+          <p>Building 5 agents at once. You'll debug 5 things simultaneously and abandon all of them. One agent validated beats five agents broken.</p>
+        </div>
+      </div>
+
+      <div class="audio-guide" role="region" aria-label="Session 4.1 exercise">
+        <div class="audio-label"><i class="ph ph-headphones"></i> NGHE — BÀI TẬP</div>
+        <audio controls preload="none" style="width:100%">
+          <source src="../audio/session_4_1_exercise.wav" type="audio/wav">
+        </audio>
+        <details class="transcript"><summary>TRANSCRIPT</summary><p>Xác định ba công việc lặp đi lặp lại của bạn. Với mỗi công việc: mô tả trigger, mô tả decision, định nghĩa các functions cần gọi, và định nghĩa output schema. Sau đó chọn công việc đơn giản nhất và viết full agent specification. Specification phải bao gồm: trigger, decision logic, function definitions với real API endpoints, và output schema dưới dạng JSON hợp lệ.</p></details>
+      </div>
+
+      <div class="reflection" id="exercise-4-1">
+        <div class="reflection-label"><i class="ph ph-pencil-simple"></i> EXERCISE — SPECIFY YOUR FIRST AGENT</div>
+        <h3>Identify 3 repetitive tasks, then spec the simplest one</h3>
+        <p>For each of your top 3 repetitive tasks, define:</p>
+        <ol>
+          <li><strong>Trigger</strong> — what event starts this task? (new email, new Jira ticket, scheduled time)</li>
+          <li><strong>Decision</strong> — what does the AI need to figure out? (classify, summarize, route)</li>
+          <li><strong>Function(s)</strong> — what external action does it call? (Slack API, Jira API, email SMTP)</li>
+          <li><strong>Output schema</strong> — what JSON structure does it return?</li>
+        </ol>
+        <p>Pick the simplest task and write its full agent specification below.</p>
+
+        <textarea placeholder="Task 1: [name]&#10;Trigger: ...&#10;Decision: ...&#10;Functions: ...&#10;Output schema: {...}&#10;&#10;Task 2: [name]&#10;...&#10;&#10;FULL SPEC for simplest task:&#10;..." aria-label="Agent specification workspace"></textarea>
+
+        <div class="success-criteria">
+          <div class="success-criteria-label">SUCCESS CRITERIA</div>
+          <label><input type="checkbox"> 3 tasks identified with frequency + time estimates</label>
+          <label><input type="checkbox"> Simplest task has full spec: trigger, decision logic, function definitions, output schema</label>
+          <label><input type="checkbox"> Function definitions are realistic (real API endpoints you'd actually use)</label>
+          <label><input type="checkbox"> Output schema is valid JSON structure</label>
+        </div>
+      </div>
+
+      <!-- ═══════════════════════════════════════ -->
+      <!-- SESSION 4.2 -->
+      <!-- ═══════════════════════════════════════ -->
+      <div class="session-divider" id="session-4-2"></div>
+      <h2>4.2 CAREER PIPELINE</h2>
+
+      <div class="audio-guide" role="region" aria-label="Session 4.2 intro">
+        <div class="audio-label"><i class="ph ph-headphones"></i> SESSION 4.2</div>
+        <audio controls preload="none" style="width:100%">
+          <source src="../audio/session_4_2.wav" type="audio/wav">
+        </audio>
+        <details class="transcript"><summary>TRANSCRIPT</summary><p>Session 4.2. Career Pipeline. Từ job posting đến tailored application trong ba mươi phút.</p></details>
+      </div>
+
+      <div class="audio-guide" role="region" aria-label="Session 4.2 hook">
+        <div class="audio-label"><i class="ph ph-headphones"></i> NGHE — ATTENTION HOOK</div>
+        <audio controls preload="none" style="width:100%">
+          <source src="../audio/session_4_2_hook.wav" type="audio/wav">
+        </audio>
+        <details class="transcript"><summary>TRANSCRIPT</summary><p>Lucas nộp đơn vào năm công ty mỗi tuần. Mỗi đơn cần tailored CV, cover letter, và portfolio selection. Cách thủ công: ba tiếng mỗi đơn nhân năm bằng mười lăm tiếng mỗi tuần chỉ để nộp đơn. Với career pipeline: ba mươi phút mỗi đơn nhân năm bằng hai tiếng rưỡi mỗi tuần. Mười hai tiếng rưỡi được giải phóng mỗi tuần.</p></details>
+      </div>
+
+      <div class="why">
+        <div class="why-label">ATTENTION HOOK — 15 HOURS/WEEK TO 2.5 HOURS</div>
+        <p>Lucas applies to 5 jobs per week. Each needs a tailored CV, cover letter, and portfolio selection. Manual approach: <strong>3 hours × 5 = 15 hours/week</strong> on job apps alone.</p>
+        <p>With a career pipeline: <strong>30 minutes × 5 = 2.5 hours/week.</strong> 12.5 hours reclaimed every single week.</p>
+      </div>
+
+      <h3>Why This Matters</h3>
+      <p>Lucas's pain point — job applications. The problem isn't writing CVs. It's that each application requires re-reading the posting, re-selecting relevant experience, re-writing to match keywords, re-formatting. A pipeline does this <strong>systematically</strong> — every time, without fatigue.</p>
+
+      <h3>Core Concept: The Career Pipeline</h3>
+
+      <div class="audio-guide" role="region" aria-label="Session 4.2 concept">
+        <div class="audio-label"><i class="ph ph-headphones"></i> NGHE — KHÁI NIỆM CHÍNH</div>
+        <audio controls preload="none" style="width:100%">
+          <source src="../audio/session_4_2_concept.wav" type="audio/wav">
+        </audio>
+        <details class="transcript"><summary>TRANSCRIPT</summary><p>Career Pipeline có hai inputs: Job Posting URL và Knowledge Base của bạn từ Session 3.2. URL Context đọc job posting và trích xuất requirements. File Search query knowledge base của bạn để tìm matching experience. Structured Output tạo ra tailored CV section, cover letter, và portfolio selection. Batch API xử lý năm applications cùng lúc với giá giảm năm mươi phần trăm.</p></details>
+      </div>
+
+      <div class="code-block">
+        <button class="copy-btn" onclick="copyCode(this)">COPY</button>
+<pre>INPUT                    PROCESS                    OUTPUT
+┌──────────┐            ┌──────────────┐           ┌──────────────┐
+│ Job      │            │              │           │ Tailored CV  │
+│ Posting  │──┐         │ URL Context  │     ┌────▶│ (PDF/HTML)   │
+│ (URL)    │  │         │ reads the    │     │     └──────────────┘
+└──────────┘  │         │ posting      │     │     ┌──────────────┐
+              ├────────▶│              │─────┼────▶│ Cover Letter │
+┌──────────┐  │         │ + Matches    │     │     │ (personalized)│
+│ Your     │──┘         │ against YOUR │     │     └──────────────┘
+│ Knowledge│            │ KB (skills,  │     │     ┌──────────────┐
+│ Base     │            │ projects,    │     └────▶│ Portfolio    │
+│ (from 3.2)│           │ achievements)│           │ Selection    │
+└──────────┘            └──────────────┘           └──────────────┘
+
+Tools:
+  URL Context      → Feed job posting URL → AI extracts requirements
+  File Search      → Query YOUR knowledge base for matching experience
+  Structured Output→ Generate tailored assets in consistent format
+  Batch API        → Process 5 applications at 50% discount</pre>
+      </div>
+
+      <div class="audio-guide" role="region" aria-label="Session 4.2 insight">
+        <div class="audio-label"><i class="ph ph-headphones"></i> NGHE — CROSS-DOMAIN INSIGHT</div>
+        <audio controls preload="none" style="width:100%">
+          <source src="../audio/session_4_2_insight.wav" type="audio/wav">
+        </audio>
+        <details class="transcript"><summary>TRANSCRIPT</summary><p>Những salesperson giỏi nhất không viết proposal từ đầu. Họ duy trì một proposal library với các phần đã được chứng minh hiệu quả, và lắp ghép chúng theo từng khách hàng. Career pipeline của bạn hoạt động giống hệt vậy: một thư viện achievements, projects, và skills — được lắp ghép per job posting.</p></details>
+      </div>
+
+      <div class="insight">
+        <div class="insight-label"><i class="ph ph-briefcase"></i> CROSS-DOMAIN — SALES (PROPOSAL LIBRARY)</div>
+        <p>Top salespeople don't write custom proposals from scratch. They maintain a <strong>proposal library</strong> of proven sections and assemble them per client. Your career pipeline works the same: a library of achievements, projects, and skills — assembled per job posting.</p>
+      </div>
+
+      <h3>Approach Comparison</h3>
+      <table>
+        <tr><th>Approach</th><th>Time/Application</th><th>Personalization</th><th>Keyword Match</th></tr>
+        <tr><td>One generic CV</td><td>0 min</td><td>None</td><td>Low</td></tr>
+        <tr><td>Manual tailoring</td><td>3 hours</td><td>High</td><td>Medium</td></tr>
+        <tr><td><strong>Career Pipeline</strong></td><td><strong>30 min</strong></td><td><strong>High</strong></td><td><strong>High (AI matches)</strong></td></tr>
+      </table>
+
+      <div class="best-practice">
+        <div class="best-practice-label"><i class="ph ph-check-circle"></i> BEST PRACTICE</div>
+        <div class="do-this">
+          <div class="do-label"><i class="ph ph-check-circle"></i> DO THIS</div>
+          <p>Build your <strong>achievement library FIRST</strong> (minimum 20 entries: situation, action, result, skills used). The pipeline is only as good as your source material.</p>
+        </div>
+        <div class="avoid-this">
+          <div class="avoid-label"><i class="ph ph-x-circle"></i> AVOID THIS</div>
+          <p>Using the pipeline without a knowledge base. AI will hallucinate achievements you don't have — which is worse than a generic CV. Source material quality determines output quality.</p>
+        </div>
+      </div>
+
+      <div class="audio-guide" role="region" aria-label="Session 4.2 exercise">
+        <div class="audio-label"><i class="ph ph-headphones"></i> NGHE — BÀI TẬP</div>
+        <audio controls preload="none" style="width:100%">
+          <source src="../audio/session_4_2_exercise.wav" type="audio/wav">
+        </audio>
+        <details class="transcript"><summary>TRANSCRIPT</summary><p>Xây career knowledge base của bạn. Liệt kê mười achievements theo format situation, action, result. Liệt kê năm skills với bằng chứng cụ thể cho mỗi skill. Liệt kê ba projects với: what, why, outcome, tech used. Sau đó test: lấy một job posting thật, thủ công xác định những achievements nào của bạn match với requirements nào. Cuối cùng, định nghĩa output format: tailored CV section trông như thế nào cụ thể.</p></details>
+      </div>
+
+      <div class="reflection" id="exercise-4-2">
+        <div class="reflection-label"><i class="ph ph-pencil-simple"></i> EXERCISE — BUILD YOUR CAREER KNOWLEDGE BASE</div>
+        <h3>10 achievements + 5 skills + 3 projects + 1 mapping test</h3>
+        <p>Build your career knowledge base:</p>
+        <ol>
+          <li><strong>List 10 achievements</strong> in SAR format: Situation → Action → Result</li>
+          <li><strong>List 5 key skills</strong> with concrete evidence for each (not "I'm good at communication")</li>
+          <li><strong>List 3 projects</strong> with: what it was, why it mattered, outcome, tools used</li>
+          <li><strong>Test it</strong>: paste a real job posting URL, then manually identify which of your achievements match which requirements</li>
+          <li><strong>Define output format</strong>: what should a "tailored CV section" look like? (heading structure, word count, tone)</li>
+        </ol>
+
+        <textarea placeholder="ACHIEVEMENTS (SAR format):&#10;1. Situation: ... | Action: ... | Result: ...&#10;2. ...&#10;&#10;SKILLS (with evidence):&#10;1. Skill: ... | Evidence: ...&#10;&#10;PROJECTS:&#10;1. What: ... | Why: ... | Outcome: ... | Tools: ...&#10;&#10;JOB POSTING MAPPING TEST:&#10;Requirement A → matches Achievement #...&#10;&#10;OUTPUT FORMAT DEFINITION:&#10;..." aria-label="Career knowledge base workspace"></textarea>
+
+        <div class="success-criteria">
+          <div class="success-criteria-label">SUCCESS CRITERIA</div>
+          <label><input type="checkbox"> 10 achievements in SAR format (specific numbers, not vague outcomes)</label>
+          <label><input type="checkbox"> Skills have concrete evidence (a project, a metric, a specific outcome)</label>
+          <label><input type="checkbox"> Job posting mapping identifies at least 5 matches</label>
+          <label><input type="checkbox"> Output format is specific (heading structure, word count, tone)</label>
+        </div>
+      </div>
+
+      <!-- ═══════════════════════════════════════ -->
+      <!-- SESSION 4.3 -->
+      <!-- ═══════════════════════════════════════ -->
+      <div class="session-divider" id="session-4-3"></div>
+      <h2>4.3 THE AI ORCHESTRATOR</h2>
+
+      <div class="audio-guide" role="region" aria-label="Session 4.3 intro">
+        <div class="audio-label"><i class="ph ph-headphones"></i> SESSION 4.3</div>
+        <audio controls preload="none" style="width:100%">
+          <source src="../audio/session_4_3.wav" type="audio/wav">
+        </audio>
+        <details class="transcript"><summary>TRANSCRIPT</summary><p>Session 4.3. The AI Orchestrator. Từ Solo PM đến AI Team — từ một prompt đến một multi-capability workflow.</p></details>
+      </div>
+
+      <div class="audio-guide" role="region" aria-label="Session 4.3 hook">
+        <div class="audio-label"><i class="ph ph-headphones"></i> NGHE — ATTENTION HOOK</div>
+        <audio controls preload="none" style="width:100%">
+          <source src="../audio/session_4_3_hook.wav" type="audio/wav">
+        </audio>
+        <details class="transcript"><summary>TRANSCRIPT</summary><p>Bạn đã học hơn mười hai AI capabilities qua bốn levels. Dùng chúng từng cái một giống như có dao Swiss Army mà chỉ dùng mỗi lưỡi dao. Orchestrator pattern kết nối nhiều capabilities thành một workflow duy nhất: trigger một lần, tạo ra output hoàn chỉnh. Đây là capstone — mọi thứ từ Level 1 đến 4 đều kết nối ở đây.</p></details>
+      </div>
+
+      <div class="why">
+        <div class="why-label">ATTENTION HOOK — THE SWISS ARMY KNIFE PROBLEM</div>
+        <p>You've learned 12+ AI capabilities across 4 levels. Using them one at a time is like having a Swiss Army knife and <strong>only using the blade</strong>.</p>
+        <p>The orchestrator pattern chains multiple capabilities into one workflow — triggered once, produces complete output. Everything in Levels 1–4 connects here.</p>
+      </div>
+
+      <h3>Why This Matters</h3>
+      <p>This is the capstone. The Context Foundation (L1) feeds the Knowledge Base (L3.2). The Design System (L2) ensures visual consistency. The Asset Pipeline (L3.1) generates content. The Agent Pattern (L4.1) automates execution. The orchestrator ties them all together into <strong>one trigger, one complete output</strong>.</p>
+
+      <h3>Core Concept: The Orchestrator Pattern</h3>
+
+      <div class="audio-guide" role="region" aria-label="Session 4.3 concept">
+        <div class="audio-label"><i class="ph ph-headphones"></i> NGHE — KHÁI NIỆM CHÍNH</div>
+        <audio controls preload="none" style="width:100%">
+          <source src="../audio/session_4_3_concept.wav" type="audio/wav">
+        </audio>
+        <details class="transcript"><summary>TRANSCRIPT</summary><p>Orchestrator Pattern bắt đầu với ONE TRIGGER. Step 1: Load context qua Context Caching. Step 2: Research qua Google Search. Step 3: Generate content qua Asset Pipeline. Step 4: Validate qua Code Execution. Step 5: Format qua Structured Output. Step 6: Distribute qua Function Calling. Kết quả là COMPLETE OUTPUT: đã research, đã tạo, đã validate, đã format, đã distribute. Đây là cách bạn từ Solo PM trở thành người có AI team.</p></details>
+      </div>
+
+      <div class="code-block">
+        <button class="copy-btn" onclick="copyCode(this)">COPY</button>
+<pre>ONE TRIGGER
+    ↓
+┌─────────────────────────────────────────┐
+│ ORCHESTRATOR (Extended Thinking)         │
+│                                         │
+│ Step 1: Load context (Context Caching)  │
+│ Step 2: Research (Google Search)        │
+│ Step 3: Generate content (Asset Pipeline)│
+│ Step 4: Validate (Code Execution)       │
+│ Step 5: Format (Structured Output)      │
+│ Step 6: Distribute (Function Calling)   │
+└─────────────────────────────────────────┘
+    ↓
+COMPLETE OUTPUT
+(researched, created, validated, formatted, distributed)</pre>
+      </div>
+
+      <h3>The Workshop Stack — Everything Connects</h3>
+      <table>
+        <tr><th>Level</th><th>Capability</th><th>Orchestrator Role</th></tr>
+        <tr><td>L1</td><td>Context Foundation</td><td>Loaded via Context Caching (90% savings)</td></tr>
+        <tr><td>L1</td><td>Knowledge Base (CSV)</td><td>Queried via File Search for grounding</td></tr>
+        <tr><td>L1</td><td>BRIEF Framework</td><td>Structures every sub-prompt</td></tr>
+        <tr><td>L2</td><td>Design Tokens</td><td>Ensures visual consistency</td></tr>
+        <tr><td>L2</td><td>Hardening Checklist</td><td>Validates output quality</td></tr>
+        <tr><td>L3</td><td>Asset Pipeline</td><td>Generates multimedia</td></tr>
+        <tr><td>L3</td><td>Campaign Pipeline</td><td>Executes distribution</td></tr>
+        <tr><td>L4</td><td>Function Calling</td><td>Triggers external actions</td></tr>
+        <tr><td>L4</td><td>Structured Output</td><td>Ensures predictable formats</td></tr>
+      </table>
+
+      <div class="audio-guide" role="region" aria-label="Session 4.3 insight">
+        <div class="audio-label"><i class="ph ph-headphones"></i> NGHE — CROSS-DOMAIN INSIGHT</div>
+        <audio controls preload="none" style="width:100%">
+          <source src="../audio/session_4_3_insight.wav" type="audio/wav">
+        </audio>
+        <details class="transcript"><summary>TRANSCRIPT</summary><p>Conductor nhạc giao hưởng không chơi mọi nhạc cụ. Họ set tempo, cue từng section đúng lúc, và đảm bảo harmony. Orchestrator prompt của bạn làm đúng như vậy: nó sequencing capabilities, pass context giữa chúng, và đảm bảo output cuối cùng là coherent. Bạn không cần biết cách chơi violin. Bạn cần biết khi nào violins vào.</p></details>
+      </div>
+
+      <div class="insight">
+        <div class="insight-label"><i class="ph ph-music-notes"></i> CROSS-DOMAIN — ORCHESTRA CONDUCTING</div>
+        <p>A conductor doesn't play every instrument. They set the tempo, cue each section at the right moment, and ensure harmony. Your orchestrator prompt does the same: it <strong>sequences capabilities, passes context between them</strong>, and ensures the final output is coherent.</p>
+      </div>
+
+      <h3>Approach Comparison</h3>
+      <table>
+        <tr><th>Approach</th><th>Capabilities Used</th><th>Coherence</th><th>Setup</th></tr>
+        <tr><td>Single prompt</td><td>1</td><td>High (simple)</td><td>0</td></tr>
+        <tr><td>Sequential prompts</td><td>3–5 (manual)</td><td>Medium (context lost between)</td><td>Low</td></tr>
+        <tr><td><strong>Orchestrator</strong></td><td><strong>All available</strong></td><td><strong>High (shared context)</strong></td><td><strong>2–4 hours (once)</strong></td></tr>
+      </table>
+
+      <div class="best-practice">
+        <div class="best-practice-label"><i class="ph ph-check-circle"></i> BEST PRACTICE</div>
+        <div class="do-this">
+          <div class="do-label"><i class="ph ph-check-circle"></i> DO THIS</div>
+          <p>Start with a <strong>2-step orchestrator</strong> (e.g., Research → Create). Add steps one at a time. Test each step independently before chaining. Validate step 1 output before wiring it to step 2.</p>
+        </div>
+        <div class="avoid-this">
+          <div class="avoid-label"><i class="ph ph-x-circle"></i> AVOID THIS</div>
+          <p>Building a 6-step orchestrator on day one. Debug hell. A broken step 3 in a 6-step chain means re-running everything. Start narrow, expand after each step is validated independently.</p>
+        </div>
+      </div>
+
+      <div class="audio-guide" role="region" aria-label="Session 4.3 exercise">
+        <div class="audio-label"><i class="ph ph-headphones"></i> NGHE — BÀI TẬP CAPSTONE</div>
+        <audio controls preload="none" style="width:100%">
+          <source src="../audio/session_4_3_exercise.wav" type="audio/wav">
+        </audio>
+        <details class="transcript"><summary>TRANSCRIPT</summary><p>Capstone project. Thiết kế một orchestrator cho thách thức lớn nhất của bạn. Định nghĩa trigger — cái gì bắt đầu workflow. Liệt kê các steps với capabilities nào theo thứ tự nào. Định nghĩa context flow — step 1 pass gì cho step 2. Định nghĩa final output format cụ thể. Và xác định một step có khả năng thất bại nhất — fallback của bạn là gì.</p></details>
+      </div>
+
+      <div class="apply-challenge" id="exercise-4-3">
+        <div class="apply-challenge-label"><i class="ph ph-trophy"></i> CAPSTONE PROJECT — DESIGN YOUR ORCHESTRATOR</div>
+        <h3>From Solo PM to AI Team — design the workflow that changes your work</h3>
+        <p>Design an orchestrator for YOUR biggest challenge:</p>
+        <ol>
+          <li><strong>Define the trigger</strong> — what single event starts the entire workflow?</li>
+          <li><strong>List the steps</strong> — which capabilities, in what order? (minimum 3 from different levels)</li>
+          <li><strong>Define context flow</strong> — what does step 1 output, and what does step 2 receive?</li>
+          <li><strong>Define the final output format</strong> — not "a report" but "a Markdown file with X sections containing Y"</li>
+          <li><strong>Identify the riskiest step</strong> — most likely to fail — and define your fallback</li>
+        </ol>
+
+        <textarea placeholder="TRIGGER: ...&#10;&#10;STEPS:&#10;Step 1: [capability from L?] → inputs: ... → output: ...&#10;Step 2: [capability from L?] → inputs: ... → output: ...&#10;Step 3: [capability from L?] → inputs: ... → output: ...&#10;&#10;CONTEXT FLOW:&#10;Step 1 → Step 2: passes [what?]&#10;Step 2 → Step 3: passes [what?]&#10;&#10;FINAL OUTPUT:&#10;Format: Markdown / JSON / HTML&#10;Sections: ...&#10;&#10;RISKIEST STEP: Step ? because ...&#10;FALLBACK: ..." aria-label="Orchestrator capstone workspace"></textarea>
+
+        <div class="success-criteria">
+          <div class="success-criteria-label">SUCCESS CRITERIA</div>
+          <label><input type="checkbox"> Orchestrator uses at least 3 capabilities from different levels</label>
+          <label><input type="checkbox"> Context flow is explicit (what step 1 passes to step 2 is named, not implied)</label>
+          <label><input type="checkbox"> Final output is concrete (not "a report" — specific format, sections, and content)</label>
+          <label><input type="checkbox"> Failure fallback exists for the riskiest step</label>
+          <label><input type="checkbox"> You can explain how this saves you 5+ hours/week</label>
+        </div>
+      </div>
+
+      <!-- Level 4 closing narration -->
+      <div class="audio-guide" role="region" aria-label="Level 4 closing narration">
+        <div class="audio-label"><i class="ph ph-headphones"></i> LEVEL 4 — CLOSING</div>
+        <audio controls preload="none" style="width:100%">
+          <source src="../audio/level_4_closing.wav" type="audio/wav">
+        </audio>
+        <details class="transcript"><summary>TRANSCRIPT</summary><p>Chúc mừng. Bạn đã hoàn thành toàn bộ workshop. Bốn levels, mười hai sessions, và một hệ thống hoàn chỉnh. Bạn đã có Context Foundation để AI hiểu sản phẩm của bạn. Design System để tạo ra interfaces đẹp. Asset Pipeline để tạo content ở tốc độ máy. Và Orchestrator để kết nối tất cả lại. Bây giờ nhiệm vụ của bạn rất đơn giản: build one thing. Deploy it. Measure it. Improve it. Chúc mừng, Lucas.</p></details>
+      </div>
+
+      <!-- ═══════════════════════════════════════ -->
+      <!-- QUIZ -->
+      <!-- ═══════════════════════════════════════ -->
+      <div class="session-divider" id="quiz"></div>
+      <div class="quiz">
+        <div class="quiz-title"><i class="ph ph-exam"></i> LEVEL 4 SELF-CHECK QUIZ</div>
+
+        <div class="quiz-item" data-answer="1">
+          <div class="quiz-question">Q1: An AI agent differs from a chatbot because:</div>
+          <ul class="quiz-options">
+            <li data-option="0" onclick="selectQuiz(this)">A) It uses a better model</li>
+            <li data-option="1" onclick="selectQuiz(this)">B) It can trigger real external actions via function calling</li>
+            <li data-option="2" onclick="selectQuiz(this)">C) It responds faster</li>
+            <li data-option="3" onclick="selectQuiz(this)">D) It costs less</li>
+          </ul>
+          <div class="quiz-answer">B — A chatbot converses. An agent acts. Function calling lets the model output structured API calls that run real code against real systems (Slack, Jira, email). The distinction is not model quality or speed — it's whether something happens in the world as a result.</div>
+        </div>
+
+        <div class="quiz-item" data-answer="2">
+          <div class="quiz-question">Q2: Best first agent to build?</div>
+          <ul class="quiz-options">
+            <li data-option="0" onclick="selectQuiz(this)">A) The most impressive one</li>
+            <li data-option="1" onclick="selectQuiz(this)">B) The most complex one</li>
+            <li data-option="2" onclick="selectQuiz(this)">C) The most repetitive + simplest task</li>
+            <li data-option="3" onclick="selectQuiz(this)">D) The one your boss asked for</li>
+          </ul>
+          <div class="quiz-answer">C — High frequency means you see the value (and catch bugs) immediately. Low complexity means debug cycles are fast. Build the boring agent first. The impressive ones come after you've validated the pattern on something simple.</div>
+        </div>
+
+        <div class="quiz-item" data-answer="1">
+          <div class="quiz-question">Q3: Career Pipeline requires which prerequisite?</div>
+          <ul class="quiz-options">
+            <li data-option="0" onclick="selectQuiz(this)">A) A paid AI subscription</li>
+            <li data-option="1" onclick="selectQuiz(this)">B) A structured knowledge base of your achievements</li>
+            <li data-option="2" onclick="selectQuiz(this)">C) Professional CV template</li>
+            <li data-option="3" onclick="selectQuiz(this)">D) 10+ years of experience</li>
+          </ul>
+          <div class="quiz-answer">B — The pipeline is assembly, not invention. It matches job requirements against YOUR achievements to produce tailored output. Without a knowledge base, it hallucinates achievements you don't have, which is worse than a generic CV.</div>
+        </div>
+
+        <div class="quiz-item" data-answer="1">
+          <div class="quiz-question">Q4: Context Caching in the Orchestrator saves money because:</div>
+          <ul class="quiz-options">
+            <li data-option="0" onclick="selectQuiz(this)">A) It uses a cheaper model</li>
+            <li data-option="1" onclick="selectQuiz(this)">B) Shared context across steps costs 90% less than re-sending</li>
+            <li data-option="2" onclick="selectQuiz(this)">C) It compresses the output</li>
+            <li data-option="3" onclick="selectQuiz(this)">D) It skips unnecessary steps</li>
+          </ul>
+          <div class="quiz-answer">B — Context Caching stores your large context (product docs, KB, design tokens) server-side with a TTL. Each orchestrator step reads from cache at ~10% of normal input token cost instead of re-uploading the full context for every step.</div>
+        </div>
+
+        <div class="quiz-item" data-answer="2">
+          <div class="quiz-question">Q5: Most important lesson from this workshop?</div>
+          <ul class="quiz-options">
+            <li data-option="0" onclick="selectQuiz(this)">A) Use more AI tools</li>
+            <li data-option="1" onclick="selectQuiz(this)">B) Write better prompts</li>
+            <li data-option="2" onclick="selectQuiz(this)">C) Build SYSTEMS that produce consistent output, not one-off prompts</li>
+            <li data-option="3" onclick="selectQuiz(this)">D) Automate everything immediately</li>
+          </ul>
+          <div class="quiz-answer">C — Tools and prompts are tactics. Systems are strategy. One-off prompts produce one-off results. Systems (pipelines, agents, orchestrators) produce compounding results — each cycle faster and better than the last because the infrastructure already exists.</div>
+        </div>
+      </div>
+
+      <!-- Bottom Nav -->
+      <div class="bottom-nav">
+        <a href="level-3-content-creation.html"><i class="ph ph-arrow-left"></i> Level 3: Content Creation</a>
+        <span class="nav-complete"><i class="ph ph-check-circle"></i> Workshop Complete</span>
+      </div>
+
+      <div class="footer">
+        <div class="footer-brand">EaseStart Workshop</div>
+        <p>AI-Powered Product Management &middot; Level 4 of 4</p>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    function copyCode(btn) {
+      const pre = btn.parentElement.querySelector('pre');
+      navigator.clipboard.writeText(pre.textContent.trim()).then(() => {
+        btn.textContent = 'COPIED';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.textContent = 'COPY'; btn.classList.remove('copied'); }, 2000);
+      });
+    }
+
+    function selectQuiz(li) {
+      const item = li.closest('.quiz-item');
+      const correctAnswer = parseInt(item.dataset.answer);
+      const selectedOption = parseInt(li.dataset.option);
+      const options = item.querySelectorAll('.quiz-options li');
+      const answer = item.querySelector('.quiz-answer');
+      options.forEach(o => { o.classList.remove('selected', 'correct', 'incorrect'); });
+      if (selectedOption === correctAnswer) {
+        li.classList.add('correct');
+      } else {
+        li.classList.add('incorrect');
+        options[correctAnswer].classList.add('correct');
+      }
+      answer.classList.add('revealed');
+    }
+  </script>
+</body>
+</html>

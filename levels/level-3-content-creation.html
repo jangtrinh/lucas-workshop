@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Level 3: Content Creation Arsenal — From zero assets to a complete content library with AI.">
+  <title>Level 3: Content Creation Arsenal — Workshop</title>
+  <link rel="stylesheet" href="../shared.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+  <div class="layout">
+    <nav class="sidebar">
+      <div class="sidebar-brand">
+        <h2>Workshop</h2>
+        <p>AI-Powered PM</p>
+      </div>
+      <div class="nav-group">
+        <div class="nav-label">Modules</div>
+        <a href="../index.html" class="nav-link"><i class="ph ph-arrow-left"></i> Hub</a>
+        <a href="level-1-ai-workflow.html" class="nav-link"><span class="nav-stage-num">1</span> AI Workflow</a>
+        <a href="level-2-design-build.html" class="nav-link"><span class="nav-stage-num">2</span> Design &amp; Build</a>
+        <a href="level-3-content-creation.html" class="nav-link active"><span class="nav-stage-num">3</span> Content Creation</a>
+        <a href="level-4-automation-career.html" class="nav-link"><span class="nav-stage-num">4</span> Automation &amp; Career</a>
+      </div>
+      <div class="nav-group">
+        <div class="nav-label">Sessions</div>
+        <a href="#session-3-1" class="nav-link">3.1 Asset Pipeline</a>
+        <a href="#session-3-2" class="nav-link">3.2 Knowledge Base</a>
+        <a href="#session-3-3" class="nav-link">3.3 Campaign Launch</a>
+        <a href="#quiz" class="nav-link">Self-Check Quiz</a>
+      </div>
+    </nav>
+
+    <main class="main">
+      <h1>Content Creation Arsenal</h1>
+      <p class="subtitle">Level 3 &middot; From zero assets to a complete content library</p>
+
+      <div class="audio-guide" role="region" aria-label="Level 3 intro narration">
+        <div class="audio-label"><i class="ph ph-headphones"></i> LEVEL 3 — INTRO</div>
+        <audio controls preload="none" style="width:100%">
+          <source src="../audio/level_3_intro.wav" type="audio/wav">
+        </audio>
+        <details class="transcript"><summary>TRANSCRIPT</summary><p>Chào mừng đến với Level 3. Content Creation Arsenal. Ở level này, bạn sẽ xây dựng pipeline tạo content hoàn chỉnh: từ một file Markdown duy nhất, bạn sẽ tạo ra audio, hình ảnh, và video. Bạn sẽ xây knowledge base cho sản phẩm của mình, và thiết lập pipeline từ research đến launch campaign trong một tuần. Mục tiêu là không còn tạo content thủ công nữa.</p></details>
+      </div>
+
+      <div class="objectives">
+        <div class="objectives-title"><i class="ph ph-target"></i> LEARNING OBJECTIVES</div>
+        <ol>
+          <li>Build an asset pipeline that generates audio, images, and video from a single Markdown source</li>
+          <li>Create a product knowledge base that AI can query with citations</li>
+          <li>Execute a research-to-launch campaign pipeline using AI tools</li>
+        </ol>
+      </div>
+
+      <!-- ═══════════════════════════════════════ -->
+      <!-- SESSION 3.1 -->
+      <!-- ═══════════════════════════════════════ -->
+      <div class="session-divider" id="session-3-1"></div>
+      <h2>3.1 THE ASSET PIPELINE</h2>
+
+      <div class="audio-guide" role="region" aria-label="Session 3.1 intro">
+        <div class="audio-label"><i class="ph ph-headphones"></i> SESSION 3.1</div>
+        <audio controls preload="none" style="width:100%">
+          <source src="../audio/session_3_1.wav" type="audio/wav">
+        </audio>
+        <details class="transcript"><summary>TRANSCRIPT</summary><p>Session 3.1. The Asset Pipeline. Multimedia từ một file Markdown duy nhất.</p></details>
+      </div>
+
+      <div class="audio-guide" role="region" aria-label="Session 3.1 hook">
+        <div class="audio-label"><i class="ph ph-headphones"></i> NGHE — ATTENTION HOOK</div>
+        <audio controls preload="none" style="width:100%">
+          <source src="../audio/session_3_1_hook.wav" type="audio/wav">
+        </audio>
+        <details class="transcript"><summary>TRANSCRIPT</summary><p>Một founder solo cần ba tuần để tạo content cho một product launch: bài blog, podcast, ảnh mạng xã hội, video demo. Sau khi xây asset pipeline, công việc đó chỉ còn mất bốn tiếng. Không phải vì AI là phép màu. Mà vì pipeline loại bỏ các công việc lặp đi lặp lại.</p></details>
+      </div>
+
+      <div class="why">
+        <div class="why-label">ATTENTION HOOK — 3 WEEKS TO 4 HOURS</div>
+        <p>A solo founder needed 3 weeks to create assets for a product launch: blog post, podcast, social images, demo video. After building an asset pipeline, the same work took <strong>4 hours</strong>.</p>
+        <p>Not because AI is magic — because the pipeline eliminates redundant work. You write once. The pipeline produces everything.</p>
+      </div>
+
+      <h3>Why This Matters</h3>
+      <p>Lucas's pain point: teaching materials look amateurish. Professional content requires audio, visuals, and video. Creating each separately is <strong>10x slower</strong> than building a pipeline — because every piece of content needs to align with every other piece, and that alignment work is what kills time.</p>
+
+      <h3>Core Concept: The Asset Pipeline</h3>
+
+      <div class="audio-guide" role="region" aria-label="Session 3.1 concept">
+        <div class="audio-label"><i class="ph ph-headphones"></i> NGHE — KHÁI NIỆM CHÍNH</div>
+        <audio controls preload="none" style="width:100%">
+          <source src="../audio/session_3_1_concept.wav" type="audio/wav">
+        </audio>
+        <details class="transcript"><summary>TRANSCRIPT</summary><p>Khái niệm chính: Asset Pipeline. Bạn chỉ viết một file Markdown duy nhất. File đó là source of truth. Từ đó, bạn trích xuất headings và key points, rồi chuyển text thành audio qua TTS, tạo hình ảnh qua Imagen hoặc Nano Banana, tạo video ngắn qua Veo, và tạo nhạc nền qua Lyria. Kết quả là toàn bộ content cho một launch đến từ một nguồn duy nhất, đảm bảo tính nhất quán.</p></details>
+      </div>
+
+      <div class="code-block">
+        <button class="copy-btn" onclick="copyCode(this)">COPY</button>
+<pre>SOURCE (Markdown/content)
+    ↓
+┌───────────────────────────────┐
+│ Layer 1: TEXT → Structured    │  Extract headings, key points, scripts
+│ Layer 2: TEXT → AUDIO (TTS)   │  VieNeu-TTS, Gemini TTS, NotebookLM
+│ Layer 3: TEXT → IMAGES        │  Nano Banana, Imagen 4 (diagrams, infographics)
+│ Layer 4: TEXT → VIDEO         │  Veo 3.1 Lite (5-8s explainer clips)
+│ Layer 5: TEXT → MUSIC         │  Lyria 3 (background audio, intros)
+└───────────────────────────────┘
+    ↓
+DISTRIBUTION (website, social, email, classroom)</pre>
+      </div>
+
+      <div class="audio-guide" role="region" aria-label="Session 3.1 insight">
+        <div class="audio-label"><i class="ph ph-headphones"></i> NGHE — CROSS-DOMAIN INSIGHT</div>
+        <audio controls preload="none" style="width:100%">
+          <source src="../audio/session_3_1_insight.wav" type="audio/wav">
+        </audio>
+        <details class="transcript"><summary>TRANSCRIPT</summary><p>Ý tưởng đến từ ngành điện ảnh. Các xưởng phim không quay cảnh ngẫu nhiên. Họ chia kịch bản thành shot list, rồi sản xuất song song: âm thanh, hình ảnh, nhạc, hiệu ứng hình ảnh. Pipeline content của bạn hoạt động giống hệt vậy. File Markdown của bạn chính là kịch bản.</p></details>
+      </div>
+
+      <div class="insight">
+        <div class="insight-label"><i class="ph ph-film-slate"></i> CROSS-DOMAIN — FILM PRODUCTION</div>
+        <p>Film studios don't shoot scenes randomly. They break a script into a <strong>shot list</strong>, then produce assets in parallel: sound, visuals, music, VFX. Your content pipeline works the same way — the Markdown file IS your script. Structure first, then parallel production.</p>
+      </div>
+
+      <h3>Approach Comparison</h3>
+      <table>
+        <tr><th>Approach</th><th>Time for 1 Launch</th><th>Asset Quality</th><th>Consistency</th></tr>
+        <tr><td>Manual (Canva + recording + editing)</td><td>3 weeks</td><td>Variable</td><td>Low</td></tr>
+        <tr><td>AI one-at-a-time</td><td>2 days</td><td>Medium</td><td>Medium</td></tr>
+        <tr><td><strong>Asset Pipeline</strong></td><td><strong>4 hours</strong></td><td><strong>High</strong></td><td><strong>High (same source)</strong></td></tr>
+      </table>
+
+      <h3>Tool Reference</h3>
+      <table>
+        <tr><th>Tool</th><th>What It Does</th><th>Cost</th><th>Best For</th></tr>
+        <tr><td>VieNeu-TTS</td><td>Vietnamese narration, voice cloning</td><td>Free (local)</td><td>Per-section audio</td></tr>
+        <tr><td>Gemini TTS</td><td>8 voices, multilingual</td><td>~$0.005/session</td><td>Quick narration</td></tr>
+        <tr><td>Nano Banana</td><td>AI image generation</td><td>$0.04/image</td><td>Diagrams, infographics</td></tr>
+        <tr><td>Imagen 4</td><td>Bulk image generation</td><td>$0.02/image</td><td>Study cards, batch</td></tr>
+        <tr><td>Veo 3.1 Lite</td><td>Short video generation</td><td>$0.05/sec @720p</td><td>Concept animations</td></tr>
+        <tr><td>Lyria 3</td><td>Music generation (30s clips)</td><td>Included</td><td>Intros, background</td></tr>
+        <tr><td>NotebookLM</td><td>2-host podcast from docs</td><td>Free</td><td>Level overview podcasts</td></tr>
+      </table>
+
+      <div class="best-practice">
+        <div class="best-practice-label"><i class="ph ph-check-circle"></i> BEST PRACTICE</div>
+        <div class="do-this">
+          <div class="do-label"><i class="ph ph-check-circle"></i> DO THIS</div>
+          <p>Start with ONE source file per product or topic. All assets derive from it. When your source changes, every asset updates from the same truth.</p>
+        </div>
+        <div class="avoid-this">
+          <div class="avoid-label"><i class="ph ph-x-circle"></i> AVOID THIS</div>
+          <p>Creating assets in isolation — separate blog post, separate podcast script, separate video script. That guarantees inconsistency. The podcast will contradict the blog. The video will miss the key point. One source prevents all of this.</p>
+        </div>
+      </div>
+
+      <div class="audio-guide" role="region" aria-label="Session 3.1 exercise">
+        <div class="audio-label"><i class="ph ph-headphones"></i> NGHE — BÀI TẬP</div>
+        <audio controls preload="none" style="width:100%">
+          <source src="../audio/session_3_1_exercise.wav" type="audio/wav">
+        </audio>
+        <details class="transcript"><summary>TRANSCRIPT</summary><p>Chọn một dự án của bạn. Viết một file Markdown hai trăm từ với: tiêu đề, ba điểm chính, một câu trích dẫn, và một call-to-action. Sau đó mô tả ba assets bạn sẽ tạo từ file đó: audio narration, social image, và explainer video. Viết prompt cụ thể cho từng asset, không phải chung chung.</p></details>
+      </div>
+
+      <div class="reflection" id="exercise-3-1">
+        <div class="reflection-label"><i class="ph ph-pencil-simple"></i> EXERCISE — BUILD YOUR SOURCE FILE</div>
+        <h3>Write a 200-word Markdown source, then plan 3 assets</h3>
+        <p>Pick one of your projects. Write a 200-word Markdown source file with:</p>
+        <ol>
+          <li><strong>Title</strong> (H1)</li>
+          <li><strong>3 key points</strong> (H2 + 1-2 sentences each)</li>
+          <li><strong>A quote</strong> (from a user, or yourself)</li>
+          <li><strong>Call-to-action</strong> (what should the reader do next?)</li>
+        </ol>
+        <p>Then describe 3 assets you'd generate from it — with specific prompts, not vague descriptions:</p>
+
+        <textarea placeholder="Write your 200-word Markdown source here, then list your 3 asset prompts below it..." aria-label="Asset pipeline workspace"></textarea>
+
+        <div class="success-criteria">
+          <div class="success-criteria-label">SUCCESS CRITERIA</div>
+          <label><input type="checkbox"> Source file has clear structure (title, 3 points, quote, CTA)</label>
+          <label><input type="checkbox"> 3 asset descriptions are specific (not "make an image" — "create a diagram showing...")</label>
+          <label><input type="checkbox"> Each asset prompt references the source content (consistency check)</label>
+          <label><input type="checkbox"> One asset is audio, one is visual, one is video or social</label>
+        </div>
+      </div>
+
+      <!-- ═══════════════════════════════════════ -->
+      <!-- SESSION 3.2 -->
+      <!-- ═══════════════════════════════════════ -->
+      <div class="session-divider" id="session-3-2"></div>
+      <h2>3.2 KNOWLEDGE BASE FOR YOUR PRODUCT</h2>
+
+      <div class="audio-guide" role="region" aria-label="Session 3.2 intro">
+        <div class="audio-label"><i class="ph ph-headphones"></i> SESSION 3.2</div>
+        <audio controls preload="none" style="width:100%">
+          <source src="../audio/session_3_2.wav" type="audio/wav">
+        </audio>
+        <details class="transcript"><summary>TRANSCRIPT</summary><p>Session 3.2. Knowledge Base cho sản phẩm của bạn. Từ những cuộc trò chuyện tạm thời đến một product brain có thể truy vấn được.</p></details>
+      </div>
+
+      <div class="audio-guide" role="region" aria-label="Session 3.2 hook">
+        <div class="audio-label"><i class="ph ph-headphones"></i> NGHE — ATTENTION HOOK</div>
+        <audio controls preload="none" style="width:100%">
+          <source src="../audio/session_3_2_hook.wav" type="audio/wav">
+        </audio>
+        <details class="transcript"><summary>TRANSCRIPT</summary><p>Một PM tại một SaaS startup có hơn hai trăm support ticket, năm mươi trang Notion, và ba mươi Slack thread về sản phẩm. Khi investor hỏi tỷ lệ retention theo cohort, không ai trả lời được mà không mất hai tiếng để đào bới. Giải pháp: xây knowledge base có cấu trúc, AI truy vấn trong ba giây, kèm citation chỉ rõ nguồn tài liệu.</p></details>
+      </div>
+
+      <div class="why">
+        <div class="why-label">ATTENTION HOOK — THE UNANSWERABLE INVESTOR QUESTION</div>
+        <p>A PM at a SaaS startup had 200+ support tickets, 50 Notion pages, and 30 Slack threads about the product. When investors asked "What's your retention rate by cohort?", nobody could answer without 2 hours of digging.</p>
+        <p>The fix: a structured knowledge base that AI could query in <strong>3 seconds</strong>, with citations pointing to the exact source document.</p>
+      </div>
+
+      <h3>Why This Matters</h3>
+      <p>Lucas's pain: generic AI outputs for Elfie products. AI gives generic answers because it has no product-specific context. In Session 1.1, you built a <code>CONTEXT.md</code>. Now we scale that to a full, queryable knowledge base — one that any stakeholder can interrogate with AI and get accurate, cited answers.</p>
+
+      <h3>Core Concept: The Product Brain</h3>
+
+      <div class="audio-guide" role="region" aria-label="Session 3.2 concept">
+        <div class="audio-label"><i class="ph ph-headphones"></i> NGHE — KHÁI NIỆM CHÍNH</div>
+        <audio controls preload="none" style="width:100%">
+          <source src="../audio/session_3_2_concept.wav" type="audio/wav">
+        </audio>
+        <details class="transcript"><summary>TRANSCRIPT</summary><p>Khái niệm chính là Product Brain gồm ba lớp. Sources là nơi bạn tập hợp tài liệu: docs, CSV, PDF, tickets, research. Knowledge Base là nơi Gemini File Search tự động chunk, embed, và index các file đó. Query Layer là nơi bất kỳ ai cũng có thể hỏi và nhận được câu trả lời kèm citation. Gemini File Search cho phép query miễn phí sau khi đã index. Context Caching giảm chín mươi phần trăm chi phí cho các query lặp lại.</p></details>
+      </div>
+
+      <div class="code-block">
+        <button class="copy-btn" onclick="copyCode(this)">COPY</button>
+<pre>SOURCES                    KNOWLEDGE BASE              QUERY LAYER
+┌──────────┐              ┌──────────────┐            ┌──────────┐
+│ Docs     │──┐           │              │            │ Student  │
+│ CSVs     │──┤  Index    │  File Search │  Query     │ asks Q   │
+│ PDFs     │──┼─────────▶ │  (Hosted RAG)│ ─────────▶ │          │
+│ Tickets  │──┤           │  + Caching   │  Answer    │ Gets     │
+│ Research │──┘           │              │ ◀───────── │ + source │
+└──────────┘              └──────────────┘            └──────────┘
+
+Key Gemini capabilities:
+  File Search (RAG)   → Auto-chunks, embeds, indexes → query with citations
+                        $0.15/1M tokens to index · queries FREE
+  Context Caching     → Cache large context → 90% cost savings (5-min TTL)
+  Embeddings          → Text to vectors for semantic search ($0.02/1M tokens)</pre>
+      </div>
+
+      <div class="audio-guide" role="region" aria-label="Session 3.2 insight">
+        <div class="audio-label"><i class="ph ph-headphones"></i> NGHE — CROSS-DOMAIN INSIGHT</div>
+        <audio controls preload="none" style="width:100%">
+          <source src="../audio/session_3_2_insight.wav" type="audio/wav">
+        </audio>
+        <details class="transcript"><summary>TRANSCRIPT</summary><p>Insight đến từ ngành thư viện học. Thư viện không chỉ lưu sách, họ catalog chúng với metadata: chủ đề, tác giả, ngày, mã phân loại. Knowledge base không có cấu trúc chỉ là một thư mục file. Index mới là sản phẩm thực sự. Khi bạn đặt tên file đúng và tổ chức theo thư mục rõ ràng, AI mới có thể tìm đúng nguồn và trích dẫn chính xác.</p></details>
+      </div>
+
+      <div class="insight">
+        <div class="insight-label"><i class="ph ph-books"></i> CROSS-DOMAIN — LIBRARY SCIENCE</div>
+        <p>Libraries don't just store books — they catalog them with metadata (subject, author, date, call number). A knowledge base without structure is just a folder of files. <strong>The index IS the product.</strong> Consistent naming and folder organization make the difference between a searchable brain and a pile of documents.</p>
+      </div>
+
+      <h3>Approach Comparison</h3>
+      <table>
+        <tr><th>Approach</th><th>Setup Time</th><th>Query Speed</th><th>Cost/Query</th><th>Accuracy</th></tr>
+        <tr><td>Search in Google Drive</td><td>0</td><td>Slow (30s+)</td><td>Free</td><td>Low (keyword)</td></tr>
+        <tr><td>Copy-paste into AI chat</td><td>5 min/session</td><td>Fast</td><td>Full token cost</td><td>Medium</td></tr>
+        <tr><td><strong>File Search (RAG)</strong></td><td><strong>1 hour (once)</strong></td><td><strong>Instant</strong></td><td><strong>Free (queries)</strong></td><td><strong>High + citations</strong></td></tr>
+        <tr><td><strong>+ Context Caching</strong></td><td><strong>+10 min</strong></td><td><strong>Instant</strong></td><td><strong>90% cheaper</strong></td><td><strong>High</strong></td></tr>
+      </table>
+
+      <div class="best-practice">
+        <div class="best-practice-label"><i class="ph ph-check-circle"></i> BEST PRACTICE</div>
+        <div class="do-this">
+          <div class="do-label"><i class="ph ph-check-circle"></i> DO THIS</div>
+          <p>Organize documents by type before uploading: <code>research/</code>, <code>decisions/</code>, <code>metrics/</code>, <code>feedback/</code>. Use consistent naming conventions. Structure makes retrieval accurate.</p>
+        </div>
+        <div class="avoid-this">
+          <div class="avoid-label"><i class="ph ph-x-circle"></i> AVOID THIS</div>
+          <p>Dumping 500 files without structure. Garbage in, garbage out — even with RAG. Poorly named files return misattributed citations, which is worse than no citations at all.</p>
+        </div>
+      </div>
+
+      <div class="audio-guide" role="region" aria-label="Session 3.2 exercise">
+        <div class="audio-label"><i class="ph ph-headphones"></i> NGHE — BÀI TẬP</div>
+        <audio controls preload="none" style="width:100%">
+          <source src="../audio/session_3_2_exercise.wav" type="audio/wav">
+        </audio>
+        <details class="transcript"><summary>TRANSCRIPT</summary><p>Tạo một mini knowledge base cho một trong những dự án của bạn. Thu thập năm tài liệu, sắp xếp vào thư mục với quy ước đặt tên rõ ràng. Viết năm câu hỏi test mà một stakeholder có thể hỏi. Với mỗi câu hỏi, dự đoán tài liệu nào sẽ được trích dẫn. Cuối cùng, mô tả cách bạn sẽ setup File Search với các tài liệu này.</p></details>
+      </div>
+
+      <div class="reflection" id="exercise-3-2">
+        <div class="reflection-label"><i class="ph ph-pencil-simple"></i> EXERCISE — DESIGN YOUR MINI KNOWLEDGE BASE</div>
+        <h3>5 documents, 5 test queries, 1 setup plan</h3>
+        <p>Create a mini knowledge base for one of your projects:</p>
+        <ol>
+          <li><strong>Gather 5 documents</strong> (product spec, user research, competitor analysis, FAQ, metrics)</li>
+          <li><strong>Organize into folders</strong> with naming convention (e.g., <code>research/2026-01-user-interviews.pdf</code>)</li>
+          <li><strong>Write 5 test queries</strong> that a stakeholder might actually ask</li>
+          <li><strong>Predict citations</strong>: for each query, which document(s) should be cited?</li>
+          <li><strong>Describe your setup</strong>: what to upload, how to chunk, what to cache</li>
+        </ol>
+
+        <textarea placeholder="List your 5 documents with folder structure, then write 5 test queries with expected citations..." aria-label="Knowledge base workspace"></textarea>
+
+        <div class="success-criteria">
+          <div class="success-criteria-label">SUCCESS CRITERIA</div>
+          <label><input type="checkbox"> 5 documents organized with clear naming convention</label>
+          <label><input type="checkbox"> 5 test queries are realistic stakeholder questions (not "tell me about the product")</label>
+          <label><input type="checkbox"> Expected citations match the right source documents</label>
+          <label><input type="checkbox"> Setup description includes: what to upload, chunking strategy, what to cache</label>
+        </div>
+      </div>
+
+      <!-- ═══════════════════════════════════════ -->
+      <!-- SESSION 3.3 -->
+      <!-- ═══════════════════════════════════════ -->
+      <div class="session-divider" id="session-3-3"></div>
+      <h2>3.3 RESEARCH-TO-LAUNCH CAMPAIGN</h2>
+
+      <div class="audio-guide" role="region" aria-label="Session 3.3 intro">
+        <div class="audio-label"><i class="ph ph-headphones"></i> SESSION 3.3</div>
+        <audio controls preload="none" style="width:100%">
+          <source src="../audio/session_3_3.wav" type="audio/wav">
+        </audio>
+        <details class="transcript"><summary>TRANSCRIPT</summary><p>Session 3.3. Research-to-Launch Campaign. Từ nghiên cứu thị trường đến campaign thật trong một pipeline hoàn chỉnh.</p></details>
+      </div>
+
+      <div class="audio-guide" role="region" aria-label="Session 3.3 hook">
+        <div class="audio-label"><i class="ph ph-headphones"></i> NGHE — ATTENTION HOOK</div>
+        <audio controls preload="none" style="width:100%">
+          <source src="../audio/session_3_3_hook.wav" type="audio/wav">
+        </audio>
+        <details class="transcript"><summary>TRANSCRIPT</summary><p>Hầu hết PM coi research, content creation, và distribution là ba dự án riêng biệt. Đó là lý do campaigns mất sáu tuần. PM giỏi nhất xây pipeline: research nuôi content, content nuôi distribution, distribution tạo ra data nuôi research tiếp theo. Một vòng mất một tuần. Nếu research-to-launch của bạn mất sáu tuần, đối thủ có pipeline ship nhanh gấp sáu lần.</p></details>
+      </div>
+
+      <div class="why">
+        <div class="why-label">ATTENTION HOOK — THE 6-WEEK TRAP</div>
+        <p>Most PMs treat research, content creation, and distribution as three separate projects. That's why campaigns take 6 weeks. The best PMs build a pipeline: research feeds content, content feeds distribution, distribution generates data that feeds the next research cycle.</p>
+        <p><strong>One cycle: 1 week.</strong> If your research-to-launch takes 6 weeks, competitors with pipelines ship 6x faster.</p>
+      </div>
+
+      <h3>Why This Matters</h3>
+      <p>Lucas's pain: can't compete in market. Competition happens at the speed of shipping. A pipeline doesn't just save time — it compounds. Cycle 2 is better than Cycle 1 because Cycle 1's data feeds it. Manual processes don't compound; they plateau.</p>
+
+      <h3>Core Concept: The Campaign Pipeline</h3>
+
+      <div class="audio-guide" role="region" aria-label="Session 3.3 concept">
+        <div class="audio-label"><i class="ph ph-headphones"></i> NGHE — KHÁI NIỆM CHÍNH</div>
+        <audio controls preload="none" style="width:100%">
+          <source src="../audio/session_3_3_concept.wav" type="audio/wav">
+        </audio>
+        <details class="transcript"><summary>TRANSCRIPT</summary><p>Campaign Pipeline gồm bốn giai đoạn trong một tuần. Research: dùng Google Search Grounding, URL Context, và Batch API với chi phí giảm năm mươi phần trăm. Create: dùng Asset Pipeline từ Session 3.1. Launch: deploy lên GitHub Pages từ Level 2. Measure: dùng Structured Output JSON để capture data và feed vào vòng research tiếp theo. Vòng lặp này là vũ khí cạnh tranh thực sự của bạn.</p></details>
+      </div>
+
+      <div class="code-block">
+        <button class="copy-btn" onclick="copyCode(this)">COPY</button>
+<pre>WEEK 1 PIPELINE:
+┌─────────┐    ┌─────────┐    ┌─────────┐    ┌──────────┐
+│RESEARCH  │───▶│ CREATE  │───▶│ LAUNCH  │───▶│ MEASURE  │
+│          │    │         │    │         │    │          │
+│Grounding │    │Asset    │    │Deploy   │    │Structured│
+│+Search   │    │Pipeline │    │GitHub   │    │Output    │
+│Batch API │    │(3.1)    │    │Pages    │    │→ next    │
+│          │    │         │    │         │    │cycle     │
+└─────────┘    └─────────┘    └─────────┘    └──────────┘
+
+Tools per phase:
+  Research  → Google Search grounding, URL Context, Batch API (50% off)
+  Create    → Asset Pipeline from Session 3.1
+  Launch    → GitHub Pages (from Level 2), social distribution
+  Measure   → Structured Output (JSON) → feed back into research KB</pre>
+      </div>
+
+      <div class="audio-guide" role="region" aria-label="Session 3.3 insight">
+        <div class="audio-label"><i class="ph ph-headphones"></i> NGHE — CROSS-DOMAIN INSIGHT</div>
+        <audio controls preload="none" style="width:100%">
+          <source src="../audio/session_3_3_insight.wav" type="audio/wav">
+        </audio>
+        <details class="transcript"><summary>TRANSCRIPT</summary><p>Insight từ Lean Startup. Build-Measure-Learn loop của Eric Ries không chỉ áp dụng cho sản phẩm — nó áp dụng cho content cũng vậy. Mỗi piece of content là một hypothesis. Distribution là thí nghiệm. Analytics là bài học. Pipeline làm cho vòng lặp đủ nhanh để iterate từng tuần thay vì từng quý.</p></details>
+      </div>
+
+      <div class="insight">
+        <div class="insight-label"><i class="ph ph-arrows-clockwise"></i> CROSS-DOMAIN — LEAN STARTUP</div>
+        <p>Eric Ries's Build-Measure-Learn loop isn't just for products — it's for content too. Every piece of content is a hypothesis. Distribution is the experiment. Analytics is the learning. <strong>The pipeline makes the loop fast enough to iterate weekly.</strong></p>
+      </div>
+
+      <h3>Cycle Comparison</h3>
+      <table>
+        <tr><th>Approach</th><th>Cycle Time</th><th>Content/Week</th><th>Data Captured</th></tr>
+        <tr><td>Manual research + manual content</td><td>6 weeks</td><td>1-2 pieces</td><td>None structured</td></tr>
+        <tr><td>AI-assisted (ad-hoc)</td><td>2 weeks</td><td>3-5 pieces</td><td>Some (unstructured)</td></tr>
+        <tr><td><strong>Campaign Pipeline</strong></td><td><strong>1 week</strong></td><td><strong>10+ pieces</strong></td><td><strong>All (structured JSON)</strong></td></tr>
+      </table>
+
+      <div class="best-practice">
+        <div class="best-practice-label"><i class="ph ph-check-circle"></i> BEST PRACTICE</div>
+        <div class="do-this">
+          <div class="do-label"><i class="ph ph-check-circle"></i> DO THIS</div>
+          <p>Start with ONE campaign type (e.g., "launch blog post + 3 social posts + 1 email"). Perfect that pipeline. Then add campaign types after the first cycle validates your approach.</p>
+        </div>
+        <div class="avoid-this">
+          <div class="avoid-label"><i class="ph ph-x-circle"></i> AVOID THIS</div>
+          <p>Trying to automate everything at once. A pipeline with 10 untested steps is a debugging nightmare. Start narrow, expand after validation. Complexity added before the first cycle is waste.</p>
+        </div>
+      </div>
+
+      <div class="audio-guide" role="region" aria-label="Session 3.3 exercise">
+        <div class="audio-label"><i class="ph ph-headphones"></i> NGHE — BÀI TẬP</div>
+        <audio controls preload="none" style="width:100%">
+          <source src="../audio/session_3_3_exercise.wav" type="audio/wav">
+        </audio>
+        <details class="transcript"><summary>TRANSCRIPT</summary><p>Thiết kế một campaign một tuần cho một trong các dự án của bạn. Xác định mục tiêu với chỉ số cụ thể. Liệt kê ba câu hỏi research để grounding với Google Search. Định nghĩa năm assets từ Asset Pipeline. Viết measurement schema dạng JSON. Cuối cùng, mô tả cụ thể: dữ liệu nào từ Cycle 1 sẽ thay đổi gì trong Cycle 2.</p></details>
+      </div>
+
+      <div class="reflection" id="exercise-3-3">
+        <div class="reflection-label"><i class="ph ph-pencil-simple"></i> EXERCISE — DESIGN YOUR 1-WEEK CAMPAIGN</div>
+        <h3>Goal → Research → Create → Launch → Measure → Repeat</h3>
+        <p>Design a 1-week campaign for one of your projects:</p>
+        <ol>
+          <li><strong>Define the goal</strong> (signups? awareness? engagement?) with a measurable target</li>
+          <li><strong>List 3 research questions</strong> to ground with Google Search (specific, not "what's the market like")</li>
+          <li><strong>Define 5 content assets</strong> from your Asset Pipeline (3.1) — all from one source file</li>
+          <li><strong>Write the measurement schema</strong> (JSON) — what data do you capture post-launch?</li>
+          <li><strong>Describe the feedback loop</strong> — what changes in Cycle 2 based on Cycle 1 data?</li>
+        </ol>
+
+        <textarea placeholder="Write your 1-week campaign plan: goal, 3 research questions, 5 assets, JSON schema, and Cycle 2 changes..." aria-label="Campaign pipeline workspace"></textarea>
+
+        <div class="success-criteria">
+          <div class="success-criteria-label">SUCCESS CRITERIA</div>
+          <label><input type="checkbox"> Clear goal with a measurable target (number, not adjective)</label>
+          <label><input type="checkbox"> 3 research questions are specific and actionable</label>
+          <label><input type="checkbox"> 5 assets are concrete and all derive from one source file</label>
+          <label><input type="checkbox"> JSON schema captures actionable metrics (not just pageviews)</label>
+          <label><input type="checkbox"> Feedback loop is explicit — Cycle 2 inputs are named, not vague</label>
+        </div>
+      </div>
+
+      <!-- Level 3 closing narration -->
+      <div class="audio-guide" role="region" aria-label="Level 3 closing narration">
+        <div class="audio-label"><i class="ph ph-headphones"></i> LEVEL 3 — CLOSING</div>
+        <audio controls preload="none" style="width:100%">
+          <source src="../audio/level_3_closing.wav" type="audio/wav">
+        </audio>
+        <details class="transcript"><summary>TRANSCRIPT</summary><p>Xuất sắc. Bạn đã hoàn thành Level 3. Bạn đã xây được ba hệ thống cốt lõi: asset pipeline từ một file Markdown, knowledge base có thể query với citation, và campaign pipeline một tuần với vòng lặp đo lường. Đây là nền tảng để bạn cạnh tranh bằng tốc độ và chất lượng. Level 4 sẽ đưa bạn đến automation và career positioning. Hẹn gặp lại.</p></details>
+      </div>
+
+      <!-- ═══════════════════════════════════════ -->
+      <!-- QUIZ -->
+      <!-- ═══════════════════════════════════════ -->
+      <div class="session-divider" id="quiz"></div>
+      <div class="quiz">
+        <div class="quiz-title"><i class="ph ph-exam"></i> LEVEL 3 SELF-CHECK QUIZ</div>
+
+        <div class="quiz-item" data-answer="1">
+          <div class="quiz-question">Q1: What is the main advantage of an Asset Pipeline over creating content one-at-a-time?</div>
+          <ul class="quiz-options">
+            <li data-option="0" onclick="selectQuiz(this)">A) It is faster</li>
+            <li data-option="1" onclick="selectQuiz(this)">B) All assets derive from one source, ensuring consistency</li>
+            <li data-option="2" onclick="selectQuiz(this)">C) It uses more AI tools</li>
+            <li data-option="3" onclick="selectQuiz(this)">D) It costs less per asset</li>
+          </ul>
+          <div class="quiz-answer">B — Speed is a byproduct. The real advantage is consistency: every asset (audio, image, video) derives from the same Markdown source, so they cannot contradict each other. One-at-a-time creation guarantees drift between assets.</div>
+        </div>
+
+        <div class="quiz-item" data-answer="1">
+          <div class="quiz-question">Q2: File Search (RAG) is better than copy-pasting docs into AI because:</div>
+          <ul class="quiz-options">
+            <li data-option="0" onclick="selectQuiz(this)">A) It handles more text per session</li>
+            <li data-option="1" onclick="selectQuiz(this)">B) It auto-chunks, embeds, and returns citations pointing to source documents</li>
+            <li data-option="2" onclick="selectQuiz(this)">C) It is entirely free</li>
+            <li data-option="3" onclick="selectQuiz(this)">D) It works offline</li>
+          </ul>
+          <div class="quiz-answer">B — File Search indexes documents once (auto-chunking + embedding), then answers queries instantly with citations. Copy-pasting burns full token cost every session and returns no source attribution.</div>
+        </div>
+
+        <div class="quiz-item" data-answer="2">
+          <div class="quiz-question">Q3: Context Caching saves money by:</div>
+          <ul class="quiz-options">
+            <li data-option="0" onclick="selectQuiz(this)">A) Using a cheaper underlying model</li>
+            <li data-option="1" onclick="selectQuiz(this)">B) Caching previous AI responses</li>
+            <li data-option="2" onclick="selectQuiz(this)">C) Reducing input token cost by 90% on repeated large contexts</li>
+            <li data-option="3" onclick="selectQuiz(this)">D) Compressing your source documents</li>
+          </ul>
+          <div class="quiz-answer">C — Context Caching stores a large context (e.g., your 50-document knowledge base) server-side with a 5-minute TTL. Subsequent queries read from cache at ~10% of normal input token cost, not from fresh uploads.</div>
+        </div>
+
+        <div class="quiz-item" data-answer="2">
+          <div class="quiz-question">Q4: In the Campaign Pipeline, what feeds the next research cycle?</div>
+          <ul class="quiz-options">
+            <li data-option="0" onclick="selectQuiz(this)">A) More refined AI prompts</li>
+            <li data-option="1" onclick="selectQuiz(this)">B) Social media comments</li>
+            <li data-option="2" onclick="selectQuiz(this)">C) Structured measurement data (JSON) captured from the previous cycle</li>
+            <li data-option="3" onclick="selectQuiz(this)">D) Competitor analysis reports</li>
+          </ul>
+          <div class="quiz-answer">C — Structured Output (JSON) from Measure phase captures actionable metrics (conversion rates, engagement by asset type, drop-off points). That data becomes the research brief for Cycle 2, making each cycle more targeted than the last.</div>
+        </div>
+
+        <div class="quiz-item" data-answer="1">
+          <div class="quiz-question">Q5: You need to create 5 social images. Which tool is most cost-effective?</div>
+          <ul class="quiz-options">
+            <li data-option="0" onclick="selectQuiz(this)">A) Nano Banana at $0.04/image</li>
+            <li data-option="1" onclick="selectQuiz(this)">B) Imagen 4 at $0.02/image</li>
+            <li data-option="2" onclick="selectQuiz(this)">C) Extracting frames from Veo 3.1 video</li>
+            <li data-option="3" onclick="selectQuiz(this)">D) Manual Canva design</li>
+          </ul>
+          <div class="quiz-answer">B — Imagen 4 at $0.02/image is half the cost of Nano Banana for bulk generation. Use Nano Banana for one-off, highly customized images where control matters more than cost. Veo screenshots waste budget on video generation when a still image is the goal.</div>
+        </div>
+      </div>
+
+      <!-- Bottom Nav -->
+      <div class="bottom-nav">
+        <a href="level-2-design-build.html"><i class="ph ph-arrow-left"></i> Level 2: Design &amp; Build</a>
+        <a href="level-4-automation-career.html">Level 4: Automation &amp; Career <i class="ph ph-arrow-right"></i></a>
+      </div>
+
+      <div class="footer">
+        <div class="footer-brand">EaseStart Workshop</div>
+        <p>AI-Powered Product Management &middot; Level 3 of 4</p>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    function copyCode(btn) {
+      const pre = btn.parentElement.querySelector('pre');
+      navigator.clipboard.writeText(pre.textContent.trim()).then(() => {
+        btn.textContent = 'COPIED';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.textContent = 'COPY'; btn.classList.remove('copied'); }, 2000);
+      });
+    }
+
+    function selectQuiz(li) {
+      const item = li.closest('.quiz-item');
+      const correctAnswer = parseInt(item.dataset.answer);
+      const selectedOption = parseInt(li.dataset.option);
+      const options = item.querySelectorAll('.quiz-options li');
+      const answer = item.querySelector('.quiz-answer');
+      options.forEach(o => { o.classList.remove('selected', 'correct', 'incorrect'); });
+      if (selectedOption === correctAnswer) {
+        li.classList.add('correct');
+      } else {
+        li.classList.add('incorrect');
+        options[correctAnswer].classList.add('correct');
+      }
+      answer.classList.add('revealed');
+    }
+  </script>
+</body>
+</html>

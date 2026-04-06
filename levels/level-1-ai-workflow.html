@@ -34,13 +34,13 @@
       <h1>AI Workflow Architecture</h1>
       <p class="subtitle">Level 1 &middot; Stop prompting. Start building systems.</p>
 
-      <!-- Audio placeholder for podcast -->
-      <div class="audio-guide" role="region" aria-label="Podcast overview Level 1">
-        <div class="audio-label"><i class="ph ph-headphones"></i> PODCAST — LEVEL 1 OVERVIEW</div>
+      <!-- Level 1 intro narration -->
+      <div class="audio-guide" role="region" aria-label="Level 1 intro narration">
+        <div class="audio-label"><i class="ph ph-headphones"></i> LEVEL 1 — INTRO</div>
         <audio controls preload="none" style="width:100%">
-          <source src="../audio/podcast-level-1.mp3" type="audio/mpeg">
-          Audio not yet generated.
+          <source src="../audio/level_1_intro.wav" type="audio/wav">
         </audio>
+        <details class="transcript"><summary>TRANSCRIPT</summary><p>Chào bạn, chào mừng đến với Level 1 của workshop AI-Powered PM. Mình là người hướng dẫn của bạn hôm nay. Ở level này, chúng ta sẽ cùng nhau xây dựng một hệ thống làm việc với AI, không phải chỉ viết prompt rời rạc, mà là một quy trình bài bản. Sẵn sàng chưa? Bắt đầu nhé.</p></details>
       </div>
 
       <div class="objectives">
@@ -59,11 +59,18 @@
       <h2>1.1 THE SYSTEM, NOT THE PROMPT</h2>
 
       <div class="audio-guide" role="region" aria-label="Audio guide session 1.1">
-        <div class="audio-label"><i class="ph ph-headphones"></i> SESSION AUDIO</div>
+        <div class="audio-label"><i class="ph ph-headphones"></i> SESSION 1.1 — AUDIO GUIDE</div>
         <audio controls preload="none" style="width:100%">
           <source src="../audio/session_1_1.wav" type="audio/wav">
         </audio>
-        <details class="transcript"><summary>TRANSCRIPT</summary><p>Chào mừng bạn đến với session 1.1: Hệ thống, không phải câu lệnh. Việc nhập câu lệnh lặp đi lặp lại khiến bạn lãng phí hàng giờ mỗi tuần. Nền tảng của một AI workflow hiệu quả là xây dựng một lớp ngữ cảnh cố định, giúp AI luôn ghi nhớ thông tin sản phẩm và thiết kế của bạn.</p></details>
+        <details class="transcript"><summary>TRANSCRIPT</summary>
+<p><strong>Intro:</strong> Session 1.1. Hệ thống, không phải câu lệnh.</p>
+<p><strong>Hook:</strong> Hãy tưởng tượng thế này. Mỗi ngày bạn mở ChatGPT, và lần nào cũng phải giải thích lại sản phẩm của mình từ đầu. Sản phẩm gì, dành cho ai, thiết kế ra sao. Một PM ở một startup Series B đã tính toán lại: anh ấy mất ba tiếng mỗi ngày chỉ để nhập lại ngữ cảnh. Mười lăm tiếng mỗi tuần. Nhân với tám mươi đô mỗi giờ, tức là hơn một nghìn hai trăm đô mỗi tuần, bay hơi.</p>
+<p><strong>Vấn đề:</strong> Vấn đề không nằm ở prompt viết kém. Vấn đề là không có hệ thống lưu trữ ngữ cảnh. AI không nhớ sản phẩm của bạn. Không nhớ quyết định thiết kế. Không nhớ đối tượng người dùng. Và khi AI không nhớ, nó sẽ đoán. Mà đoán thì luôn luôn ra kết quả chung chung.</p>
+<p><strong>Khái niệm:</strong> Giải pháp là mô hình ba lớp. Lớp một là nền tảng ngữ cảnh. Bạn viết một lần, dùng mãi. Bao gồm thông tin sản phẩm, đối tượng khách hàng, hệ thống thiết kế, và các quyết định đã đưa ra. Lớp hai là hướng dẫn kỹ năng. Đây là các template tái sử dụng, quy tắc viết, format đầu ra. Lớp ba mới là prompt. Là câu lệnh cụ thể cho từng tác vụ. Hầu hết mọi người chỉ xây lớp ba. Đó là lý do kết quả thiếu nhất quán. Chất lượng thực sự đến từ lớp một và lớp hai.</p>
+<p><strong>Insight:</strong> Một góc nhìn thú vị từ ngành game. Tưởng tượng mỗi lần bạn mở game, bạn phải chơi lại từ màn một, không có save file. Đó chính là cảm giác khi dùng AI không có ngữ cảnh. Mô hình ba lớp chính là save file của bạn. Lớp một là nhân vật, lớp hai là kỹ năng, lớp ba là nhiệm vụ hiện tại.</p>
+<p><strong>Bài tập:</strong> Hãy tạo một file tên là CONTEXT.MD cho một dự án thực của bạn. Viết năm phần. Thông tin sản phẩm. Ràng buộc thiết kế. Giọng văn và phong cách. Các quyết định đã đưa ra. Và những điều cần tránh. Tiêu chí thành công: tất cả năm phần đều chứa dữ liệu thật, không phải placeholder. Ít nhất hai mục trong phần quyết định, và hai mục trong phần cần tránh.</p>
+        </details>
       </div>
 
       <div class="why">
@@ -225,11 +232,17 @@
       <h2>1.2 RESEARCH THAT COMPOUNDS</h2>
 
       <div class="audio-guide" role="region" aria-label="Audio guide session 1.2">
-        <div class="audio-label"><i class="ph ph-headphones"></i> SESSION AUDIO</div>
+        <div class="audio-label"><i class="ph ph-headphones"></i> SESSION 1.2 — AUDIO GUIDE</div>
         <audio controls preload="none" style="width:100%">
           <source src="../audio/session_1_2.wav" type="audio/wav">
         </audio>
-        <details class="transcript"><summary>TRANSCRIPT</summary><p>Session 1.2: Research That Compounds. Thay vì vứt bỏ lịch sử chat sau mỗi lần nghiên cứu, hãy lưu trữ dữ liệu dưới định dạng có cấu trúc như CSV. Khi AI có thể truy vấn một cơ sở kiến thức ngày càng lớn, chất lượng đầu ra của bạn sẽ tăng dần theo thời gian.</p></details>
+        <details class="transcript"><summary>TRANSCRIPT</summary>
+<p><strong>Intro:</strong> Session 1.2. Research That Compounds.</p>
+<p><strong>Hook:</strong> Bạn đã bao giờ hỏi AI một câu hỏi nghiên cứu, nhận được câu trả lời hay, rồi đóng cửa sổ chat và quên luôn chưa? Đó là cách phần lớn mọi người làm. Và đó là lý do nghiên cứu không bao giờ tích lũy được. Hai mươi data points có cấu trúc tốt, đánh bại hai trăm đoạn văn lộn xộn.</p>
+<p><strong>Khái niệm:</strong> Ý tưởng chính rất đơn giản. Thay vì chat xong rồi bỏ, hãy lưu kết quả nghiên cứu vào một file có cấu trúc. Có thể là CSV, có thể là Markdown. Mỗi dòng gồm: nguồn, danh mục, insight, độ tin cậy, và ngày. Khi cơ sở kiến thức này lớn dần, AI có thể truy vấn nó. Và chất lượng đầu ra sẽ tăng theo thời gian, không phải reset về zero mỗi lần.</p>
+<p><strong>Insight:</strong> Trong ngành báo chí, có một nguyên tắc gọi là kim tự tháp ngược. Thông tin quan trọng nhất luôn đặt ở đầu. Chi tiết bổ sung xếp sau. Áp dụng vào nghiên cứu AI cũng vậy. Insight chính ở dòng đầu. Bằng chứng và nguồn ở dòng sau. Khi AI đọc file này, nó nắm được ý chính ngay lập tức.</p>
+<p><strong>Bài tập:</strong> Hãy dành đúng hai mươi phút làm một nghiên cứu sprint. Chọn một chủ đề liên quan đến dự án của bạn. Chạy AI research, rồi trích xuất kết quả vào một file CSV. Mỗi dòng cần có năm cột: nguồn, danh mục, insight, độ tin cậy, và ngày tháng. Mục tiêu là ít nhất mười dòng dữ liệu có chất lượng. Đừng cầu toàn, hai mươi phút là đủ.</p>
+        </details>
       </div>
 
       <div class="why">
@@ -348,11 +361,17 @@
       <h2>1.3 BRIEFING AI LIKE A CEO</h2>
 
       <div class="audio-guide" role="region" aria-label="Audio guide session 1.3">
-        <div class="audio-label"><i class="ph ph-headphones"></i> SESSION AUDIO</div>
+        <div class="audio-label"><i class="ph ph-headphones"></i> SESSION 1.3 — AUDIO GUIDE</div>
         <audio controls preload="none" style="width:100%">
           <source src="../audio/session_1_3.wav" type="audio/wav">
         </audio>
-        <details class="transcript"><summary>TRANSCRIPT</summary><p>Session 1.3: Khởi tạo brief như một CEO. Thay vì ra lệnh chung chung, hãy sử dụng framework BRIEF: Background, Requirements, Intent, Examples và Format. Một brief rành mạch sẽ triệt tiêu vòng lặp sửa lỗi, giúp AI đưa ra kết quả chất lượng ngay ở lần chạy đầu tiên.</p></details>
+        <details class="transcript"><summary>TRANSCRIPT</summary>
+<p><strong>Intro:</strong> Session 1.3. Khởi tạo brief như một CEO.</p>
+<p><strong>Hook:</strong> Bạn có biết sự khác biệt giữa một brief tốt và brief dở là gì không? Brief dở dẫn đến tám đến mười hai vòng chỉnh sửa. Brief tốt, sử dụng framework BRIEF, cho ra kết quả đạt yêu cầu ngay lần chạy đầu tiên. Hoặc tối đa lần thứ hai. Đó không phải may mắn. Đó là kỹ thuật.</p>
+<p><strong>Khái niệm:</strong> Framework BRIEF gồm năm phần. B là Background, bối cảnh. Sản phẩm gì, dành cho ai. R là Requirements, yêu cầu cụ thể. Phải có gì, không được có gì. I là Intent, ý đồ. Kết quả tốt trông như thế nào. E là Examples, ví dụ tham khảo. Cho AI thấy mẫu thực tế. F là Format, định dạng đầu ra. Markdown, HTML, hay CSV. Khi bạn điền đủ năm phần này, AI không còn phải đoán nữa.</p>
+<p><strong>Insight:</strong> Hãy nghĩ về cách một CEO giao việc. CEO không nói chung chung kiểu, làm cho tôi cái gì đó đẹp đẹp. CEO nói: Đây là mục tiêu. Đây là ràng buộc. Đây là mẫu tham khảo. Deadline là thứ Sáu. Brief cho AI cũng nên rõ ràng như vậy. Mỗi phần trong BRIEF đều có mục đích: loại bỏ sự mơ hồ.</p>
+<p><strong>Bài tập:</strong> Bài tập cuối cùng của Level 1. Chọn một tác vụ thực tế bạn cần làm. Có thể là viết tài liệu giảng dạy, thiết kế trang web, hay chuẩn bị hồ sơ xin việc. Viết một brief hoàn chỉnh theo framework BRIEF, đủ năm phần. Sau đó chạy brief này trong AI và đánh giá kết quả. Tiêu chí: kết quả đạt ít nhất bảy trên mười ngay lần chạy đầu tiên. Nếu cần sửa quá hai lần, brief chưa đủ tốt. Hãy quay lại bổ sung.</p>
+        </details>
       </div>
 
       <div class="why">
@@ -466,6 +485,15 @@ BAD: [link to what you DON'T want]
       <div class="apply-challenge">
         <div class="apply-challenge-label"><i class="ph ph-lightning"></i> APPLY CHALLENGE</div>
         <p>Run your brief through AI. Score the output 1-10 on: Accuracy, Completeness, Consistency, Originality. If average &lt; 7, identify which BRIEF section was too vague and strengthen it.</p>
+      </div>
+
+      <!-- Level 1 closing narration -->
+      <div class="audio-guide" role="region" aria-label="Level 1 closing narration">
+        <div class="audio-label"><i class="ph ph-headphones"></i> LEVEL 1 — CLOSING</div>
+        <audio controls preload="none" style="width:100%">
+          <source src="../audio/level_1_closing.wav" type="audio/wav">
+        </audio>
+        <details class="transcript"><summary>TRANSCRIPT</summary><p>Chúc mừng bạn đã hoàn thành Level 1. Bạn đã biết cách xây dựng nền tảng ngữ cảnh, tạo cơ sở kiến thức có cấu trúc, và viết brief chất lượng cao. Ba kỹ năng này là nền móng cho mọi thứ tiếp theo. Khi sẵn sàng, hãy chuyển sang Level 2, nơi chúng ta sẽ biến kiến thức thành sản phẩm thực.</p></details>
       </div>
 
       <!-- ═══════════════════════════════════════ -->

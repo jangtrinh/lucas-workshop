@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Level 1: AI Workflow Architecture — Build systems that produce consistent, high-quality AI output.">
+  <title>Level 1: AI Workflow Architecture — Workshop</title>
+  <link rel="stylesheet" href="../shared.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+  <div class="layout">
+    <nav class="sidebar">
+      <div class="sidebar-brand">
+        <h2>Workshop</h2>
+        <p>AI-Powered PM</p>
+      </div>
+      <div class="nav-group">
+        <div class="nav-label">Modules</div>
+        <a href="../index.html" class="nav-link"><i class="ph ph-arrow-left"></i> Hub</a>
+        <a href="level-1-ai-workflow.html" class="nav-link active"><span class="nav-stage-num">1</span> AI Workflow</a>
+        <a href="level-2-design-build.html" class="nav-link"><span class="nav-stage-num">2</span> Design &amp; Build</a>
+      </div>
+      <div class="nav-group">
+        <div class="nav-label">Sessions</div>
+        <a href="#session-1-1" class="nav-link">1.1 System, Not Prompt</a>
+        <a href="#session-1-2" class="nav-link">1.2 Research</a>
+        <a href="#session-1-3" class="nav-link">1.3 Briefing AI</a>
+        <a href="#quiz" class="nav-link">Self-Check Quiz</a>
+      </div>
+    </nav>
+
+    <main class="main">
+      <h1>AI Workflow Architecture</h1>
+      <p class="subtitle">Level 1 &middot; Stop prompting. Start building systems.</p>
+
+      <!-- Audio placeholder for podcast -->
+      <div class="audio-guide" role="region" aria-label="Podcast overview Level 1">
+        <div class="audio-label"><i class="ph ph-headphones"></i> PODCAST — LEVEL 1 OVERVIEW</div>
+        <audio controls preload="none" style="width:100%">
+          <source src="../audio/podcast-level-1.mp3" type="audio/mpeg">
+          Audio not yet generated.
+        </audio>
+      </div>
+
+      <div class="objectives">
+        <div class="objectives-title"><i class="ph ph-target"></i> LEARNING OBJECTIVES</div>
+        <ol>
+          <li>Build a persistent AI workspace that remembers your product context across sessions</li>
+          <li>Run structured research that feeds a reusable knowledge base (not throwaway conversations)</li>
+          <li>Write specs and briefs that produce production-grade output on the first try</li>
+        </ol>
+      </div>
+
+      <!-- ═══════════════════════════════════════ -->
+      <!-- SESSION 1.1 -->
+      <!-- ═══════════════════════════════════════ -->
+      <div class="session-divider" id="session-1-1"></div>
+      <h2>1.1 THE SYSTEM, NOT THE PROMPT</h2>
+
+      <div class="audio-guide" role="region" aria-label="Audio guide session 1.1">
+        <div class="audio-label"><i class="ph ph-headphones"></i> SESSION AUDIO</div>
+        <audio controls preload="none" style="width:100%">
+          <source src="../audio/session-1.1-system-not-prompt.wav" type="audio/wav">
+          Audio not yet generated.
+        </audio>
+        <details class="transcript"><summary>TRANSCRIPT</summary><p>Transcript will be added after TTS generation.</p></details>
+      </div>
+
+      <div class="why">
+        <div class="why-label">ATTENTION HOOK — THE $2,400 PROMPT PROBLEM</div>
+        <p>A PM at a Series B startup spent 3 hours/day re-explaining their product to ChatGPT across 47 separate conversations. That's 15 hours/week x $80/hr = <strong>$1,200/week</strong> of PM salary wasted on context re-entry.</p>
+        <p>The fix wasn't a better prompt. It was a <strong>system</strong>: one persistent workspace with product context, design tokens, and personas loaded once. Re-prompting time dropped to 12 minutes/day.</p>
+      </div>
+
+      <p><strong>Question for you:</strong> How many times this week did you re-explain the same thing to an AI?</p>
+
+      <h3>Why This Matters</h3>
+      <p>Every pain point traces back to one root cause: <strong>context loss</strong>.</p>
+
+      <table>
+        <tr><th>Pain Point</th><th>Root Cause</th></tr>
+        <tr><td>"Changing outputs after each iteration"</td><td>AI doesn't remember your decisions</td></tr>
+        <tr><td>"Generic outputs for design/specs"</td><td>AI doesn't know your product context</td></tr>
+        <tr><td>"AI slop — undervalued, obvious content"</td><td>AI doesn't know your audience's level</td></tr>
+        <tr><td>"Inconsistent design output"</td><td>AI doesn't have your design system</td></tr>
+        <tr><td>"Not truly tailor-made"</td><td>AI doesn't have your specific constraints</td></tr>
+      </table>
+
+      <div class="insight">
+        <div class="insight-label">KEY INSIGHT</div>
+        <p><strong>One system fixes all five.</strong></p>
+      </div>
+
+      <h3>Core Concept: The 3-Layer AI Workflow</h3>
+
+      <div class="code-block">
+        <button class="copy-btn" onclick="copyCode(this)">COPY</button>
+<pre>
+┌─────────────────────────────────────┐
+│  Layer 3: TASK PROMPT               │  ← What you ask (changes each time)
+│  "Write a PRD for feature X"        │
+├─────────────────────────────────────┤
+│  Layer 2: SKILL INSTRUCTIONS        │  ← How to do it (reusable templates)
+│  Design rules, writing style,       │
+│  output format, quality criteria    │
+├─────────────────────────────────────┤
+│  Layer 1: CONTEXT FOUNDATION        │  ← Who you are (load once, use always)
+│  Product brief, target audience,    │
+│  design tokens, competitor data,    │
+│  past decisions, brand voice        │
+└─────────────────────────────────────┘</pre>
+      </div>
+
+      <p>Most people only build Layer 3 (the prompt). That's why outputs are generic. <strong>Consistency comes from Layers 1 and 2.</strong></p>
+
+      <div class="insight">
+        <div class="insight-label"><i class="ph ph-book-open"></i> CROSS-DOMAIN — GAME DESIGN SAVE STATES</div>
+        <p>Video games solved this decades ago. Imagine if every time you opened a game, you started from Level 1 with no inventory. That's what ad-hoc prompting is — no save state. The 3-Layer system is your <strong>save file</strong>: Layer 1 = your character (product context), Layer 2 = your abilities (skill templates), Layer 3 = the current quest (task prompt).</p>
+      </div>
+
+      <h3>Comparison: Approaches to AI Workflow</h3>
+      <table>
+        <tr><th>Approach</th><th>Setup</th><th>Per-Task</th><th>Quality</th><th>Consistency</th></tr>
+        <tr><td>Ad-hoc prompting</td><td>0 min</td><td>30-60 min</td><td>3-7/10</td><td>Low</td></tr>
+        <tr><td>Prompt library</td><td>2 hrs</td><td>15-20 min</td><td>5-7/10</td><td>Medium</td></tr>
+        <tr><td><strong>3-Layer System</strong></td><td>4 hrs (once)</td><td>5-10 min</td><td>7-9/10</td><td>High</td></tr>
+      </table>
+
+      <div class="best-practice">
+        <div class="best-practice-label"><i class="ph ph-check-circle"></i> BEST PRACTICE</div>
+        <div class="do-this">
+          <div class="do-label"><i class="ph ph-check-circle"></i> DO THIS</div>
+          <p>Build your Context Foundation (Layer 1) BEFORE writing any prompts. Spend 2 hours documenting: product (what, who, problem), design (tokens, typography, components), voice (formal/casual/technical), constraints (budget, timeline, tech stack).</p>
+        </div>
+        <div class="avoid-this">
+          <div class="avoid-label"><i class="ph ph-x-circle"></i> AVOID THIS</div>
+          <p>Don't try to put everything in one mega-prompt. Layer 1 should be a <strong>separate document</strong> that gets loaded into your AI workspace — not copy-pasted into every conversation.</p>
+        </div>
+      </div>
+
+      <div class="reflection" id="exercise-1-1">
+        <div class="reflection-label"><i class="ph ph-pencil-simple"></i> EXERCISE</div>
+        <h3>Build Your Context Foundation</h3>
+        <p>Create a <code>CONTEXT.md</code> file for one of your real projects (teaching materials, Elfie product, or job search). Include all 5 sections below.</p>
+
+        <div class="code-block">
+          <button class="copy-btn" onclick="copyCode(this)">COPY</button>
+<pre># [Project Name] — AI Context Foundation
+
+## Product
+- One-liner: [what it does]
+- Target user: [who, their level, their goal]
+- Core problem: [what pain this solves]
+
+## Design Constraints
+- Colors: [your palette]
+- Typography: [fonts, sizes]
+- Style: [minimal? playful? corporate?]
+
+## Voice &amp; Tone
+- Writing style: [casual/professional/technical]
+- Language: [Vietnamese/English/bilingual]
+- Avoid: [jargon? emojis? passive voice?]
+
+## Decisions Made
+- [Date]: [Decision and why]
+
+## Anti-Patterns (What NOT to do)
+- [Specific thing that went wrong before]</pre>
+        </div>
+
+        <textarea placeholder="Paste your completed CONTEXT.md here to review it..." aria-label="Context Foundation workspace"></textarea>
+
+        <div class="success-criteria">
+          <div class="success-criteria-label">SUCCESS CRITERIA</div>
+          <label><input type="checkbox"> All 5 sections filled with REAL data (not placeholders)</label>
+          <label><input type="checkbox"> At least 2 entries in "Decisions Made"</label>
+          <label><input type="checkbox"> At least 2 entries in "Anti-Patterns" from actual pain points</label>
+        </div>
+      </div>
+
+      <details class="advanced">
+        <summary><i class="ph ph-eye"></i> EXPECTED OUTPUT — WHAT GOOD LOOKS LIKE</summary>
+        <div>
+          <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">COPY</button>
+<pre># EaseStart — AI Context Foundation
+
+## Product
+- One-liner: CLI-based startup validation that generates Intel Memo reports
+- Target user: Non-technical founders, Stage 0-2
+- Core problem: Founders waste months building before validating demand
+
+## Design Constraints
+- Colors: Monochrome only (#000, #FFF, #4E4B66, #E0E0E0, #FAFAFA)
+- Typography: System fonts, uppercase labels, 14px minimum
+- Style: Minimal, no gradients, no shadows, no border-radius
+
+## Voice &amp; Tone
+- Writing style: Direct, actionable, CEO-grade
+- Language: English (content), Vietnamese (communication)
+- Avoid: Jargon, generic advice, bracket placeholders
+
+## Decisions Made
+- 2025-12: Monochrome design — reduces cognitive load for stressed founders
+- 2026-01: CSV knowledge base over SQL — simpler to curate, version, iterate
+
+## Anti-Patterns
+- Green/red for do/don't — violates monochrome rule
+- Generic advice like "do market research" — must be personalized</pre>
+          </div>
+        </div>
+      </details>
+
+      <div class="apply-challenge">
+        <div class="apply-challenge-label"><i class="ph ph-lightning"></i> APPLY CHALLENGE</div>
+        <p>Load your <code>CONTEXT.md</code> into your preferred AI tool (Claude Project, ChatGPT Custom Instructions, or a system prompt). Then ask it to: (1) write a 1-paragraph product description, (2) create 3 social media post ideas, (3) suggest a color palette for a landing page.</p>
+        <p><strong>Compare:</strong> Does the output feel generic or personalized? If generic, your Context Foundation is too vague — iterate.</p>
+      </div>
+
+      <!-- ═══════════════════════════════════════ -->
+      <!-- SESSION 1.2 -->
+      <!-- ═══════════════════════════════════════ -->
+      <div class="session-divider" id="session-1-2"></div>
+      <h2>1.2 RESEARCH THAT COMPOUNDS</h2>
+
+      <div class="audio-guide" role="region" aria-label="Audio guide session 1.2">
+        <div class="audio-label"><i class="ph ph-headphones"></i> SESSION AUDIO</div>
+        <audio controls preload="none" style="width:100%">
+          <source src="../audio/session-1.2-research.wav" type="audio/wav">
+          Audio not yet generated.
+        </audio>
+        <details class="transcript"><summary>TRANSCRIPT</summary><p>Transcript will be added after TTS generation.</p></details>
+      </div>
+
+      <div class="why">
+        <div class="why-label">ATTENTION HOOK — THE GOLDFISH MEMORY PROBLEM</div>
+        <p>You run a great research session with AI: 45 minutes, 12 sources, deep competitor analysis. Then you close the tab. Next week, you need the same data — but you start from zero. The research doesn't compound. It evaporates.</p>
+        <p>Meanwhile, the best PMs build <strong>knowledge bases</strong> — structured data that gets richer over time. After 3 months, they have an unfair advantage: AI outputs grounded in 200+ data points instead of 5.</p>
+      </div>
+
+      <h3>Bridge</h3>
+      <p>In Session 1.1, you built a Context Foundation — the "who" and "what." Now we add the "market" layer: competitors, trends, benchmarks, and validated data points.</p>
+
+      <h3>Why This Matters</h3>
+      <p>Your pain point: <em>"Generic outputs for design, specs that cannot really compete in market."</em></p>
+      <p>Generic outputs happen when AI has no market context. It defaults to textbook answers because it doesn't know YOUR specific competitive landscape.</p>
+
+      <h3>Core Concept: The Knowledge Flywheel</h3>
+      <div class="code-block">
+        <button class="copy-btn" onclick="copyCode(this)">COPY</button>
+<pre>    ┌─── RESEARCH ───┐
+    │  Web search,    │
+    │  competitor     │
+    │  analysis,      │
+    │  user interviews│
+    ▼                 │
+┌────────┐     ┌──────────┐
+│STRUCTURE│────▶│  STORE   │
+│  Clean, │     │  CSV/MD  │
+│  tag,   │     │  files   │
+│  score  │     │          │
+└────────┘     └──────────┘
+                     │
+              ┌──────▼──────┐
+              │   QUERY     │
+              │  AI reads   │
+              │  KB before  │──── Better outputs
+              │  answering  │     next time
+              └─────────────┘</pre>
+      </div>
+      <p><strong>Key insight:</strong> The format matters more than the volume. 20 well-structured data points beat 200 unstructured paragraphs.</p>
+
+      <div class="insight">
+        <div class="insight-label"><i class="ph ph-book-open"></i> CROSS-DOMAIN — JOURNALISM'S INVERTED PYRAMID</div>
+        <p>Journalists structure information with the most important facts first. Apply this to your knowledge base: P0 = hard numbers, P1 = positioning/strengths, P2 = trends/opinions.</p>
+      </div>
+
+      <h3>Comparison: Research Approaches</h3>
+      <table>
+        <tr><th>Approach</th><th>Data Retention</th><th>Reusability</th><th>Quality Over Time</th></tr>
+        <tr><td>ChatGPT conversation</td><td>0% (after tab close)</td><td>None</td><td>Flat</td></tr>
+        <tr><td>Google Doc notes</td><td>80% (if you find them)</td><td>Low (unstructured)</td><td>Slow growth</td></tr>
+        <tr><td><strong>Structured CSV/MD</strong></td><td>100% (versioned)</td><td>High (AI-queryable)</td><td>Compounds</td></tr>
+      </table>
+
+      <div class="best-practice">
+        <div class="best-practice-label"><i class="ph ph-check-circle"></i> BEST PRACTICE</div>
+        <div class="do-this">
+          <div class="do-label"><i class="ph ph-check-circle"></i> DO THIS</div>
+          <p>After every research session, extract findings into structured format with columns: <code>source, category, insight, confidence, date</code>.</p>
+        </div>
+        <div class="avoid-this">
+          <div class="avoid-label"><i class="ph ph-x-circle"></i> AVOID THIS</div>
+          <p>Don't dump raw web pages into your knowledge base. AI can't distinguish signal from noise in unstructured data. Always: clean > tag > score before storing.</p>
+        </div>
+      </div>
+
+      <div class="reflection" id="exercise-1-2">
+        <div class="reflection-label"><i class="ph ph-pencil-simple"></i> EXERCISE</div>
+        <h3>Run a 20-Minute Research Sprint</h3>
+        <p>Pick one of your projects and run a focused research sprint:</p>
+        <ol>
+          <li><strong>Define the question</strong> (1 min): What specific thing do you need to know?</li>
+          <li><strong>Search</strong> (10 min): Use web search + AI to find answers</li>
+          <li><strong>Structure</strong> (5 min): Extract into CSV format</li>
+          <li><strong>Store</strong> (2 min): Save the CSV in your project directory</li>
+          <li><strong>Test</strong> (2 min): Load the CSV into AI and ask a question that requires the data</li>
+        </ol>
+
+        <textarea placeholder="Paste your structured CSV data here..." aria-label="Research sprint workspace"></textarea>
+
+        <div class="success-criteria">
+          <div class="success-criteria-label">SUCCESS CRITERIA</div>
+          <label><input type="checkbox"> CSV has at least 8 rows of structured data</label>
+          <label><input type="checkbox"> Each row has valid source attribution</label>
+          <label><input type="checkbox"> Confidence is rated (high/medium/low)</label>
+          <label><input type="checkbox"> AI can answer a competitive question using ONLY your CSV</label>
+        </div>
+      </div>
+
+      <details class="advanced">
+        <summary><i class="ph ph-eye"></i> EXPECTED OUTPUT — SAMPLE CSV</summary>
+        <div>
+          <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">COPY</button>
+<pre>source,category,insight,confidence,date
+"G2 Reviews",competitor,"ToolA: 4.2 stars, 890 reviews, $19/mo starter",high,2026-03
+"Product Hunt",competitor,"ToolB: launched 2025-06, 1.2K upvotes, free+$49/mo",high,2026-03
+"LinkedIn",competitor,"ToolC: 45 employees, raised $8M, enterprise-focused",medium,2026-03
+"Reddit r/product",demand,"23 posts in 3 months asking for simpler alternative",high,2026-03
+"Statista",market,"Global PM tools market: $7.8B in 2025, $12.3B by 2028",high,2026-03
+"Twitter/X",trend,"3 threads 500+ likes about AI replacing PM workflows",medium,2026-03
+"Crunchbase",funding,"Sector received $230M in 2025 across 18 deals",high,2026-03
+"UserVoice",pain,"Top request: Slack integration (340 votes)",high,2026-03</pre>
+          </div>
+        </div>
+      </details>
+
+      <div class="apply-challenge">
+        <div class="apply-challenge-label"><i class="ph ph-lightning"></i> APPLY CHALLENGE</div>
+        <p>Create a research knowledge base for your <strong>teaching career</strong>: Research 5 best practices for creating AI-resistant learning materials. Structure in CSV. Load into AI and ask: "Based on this research, what should I change about my current workshop design process?"</p>
+      </div>
+
+      <!-- ═══════════════════════════════════════ -->
+      <!-- SESSION 1.3 -->
+      <!-- ═══════════════════════════════════════ -->
+      <div class="session-divider" id="session-1-3"></div>
+      <h2>1.3 BRIEFING AI LIKE A CEO</h2>
+
+      <div class="audio-guide" role="region" aria-label="Audio guide session 1.3">
+        <div class="audio-label"><i class="ph ph-headphones"></i> SESSION AUDIO</div>
+        <audio controls preload="none" style="width:100%">
+          <source src="../audio/session-1.3-briefing.wav" type="audio/wav">
+          Audio not yet generated.
+        </audio>
+        <details class="transcript"><summary>TRANSCRIPT</summary><p>Transcript will be added after TTS generation.</p></details>
+      </div>
+
+      <div class="why">
+        <div class="why-label">ATTENTION HOOK — THE CEO TEST</div>
+        <p>When a CEO briefs their team, they don't say: "Make something good." They say: Target — reduce churn by 15% in Q2. Constraint — no new hires. Reference — how Spotify does onboarding. Anti-pattern — don't copy competitors' pricing page. Deliverable — 3-slide deck by Friday.</p>
+        <p>That brief produces predictable output because it defines <strong>what good looks like</strong> upfront. Your AI prompts should work the same way.</p>
+      </div>
+
+      <h3>Bridge</h3>
+      <p>In Session 1.1, you built your Context Foundation (Layer 1). In Session 1.2, you built your Knowledge Base. Now we build Layer 2: <strong>Skill Instructions</strong> — reusable templates that tell AI HOW to execute.</p>
+
+      <h3>Why This Matters</h3>
+      <p>Your pain point: <em>"Continuous iteration due to simple CSS errors"</em> and <em>"Changing outputs here and there after each iteration."</em></p>
+      <p>These aren't AI problems. They're <strong>briefing problems</strong>. The AI doesn't know your CSS conventions, your layout rules, or what "done" looks like. Fix the brief, fix the output.</p>
+
+      <h3>Core Concept: The BRIEF Framework</h3>
+      <div class="code-block">
+        <button class="copy-btn" onclick="copyCode(this)">COPY</button>
+<pre>B — Background:   Load your Context Foundation (Layer 1)
+R — Requirements:  What MUST the output include? What MUST it avoid?
+I — Intent:        WHY do you need this? What decision does it support?
+E — Examples:      Show 1 good example and 1 bad example
+F — Format:        Exact output structure (HTML? Markdown? CSV? JSON?)</pre>
+      </div>
+
+      <h3>Bad Brief vs. Good Brief</h3>
+
+      <div class="warning">
+        <div class="warning-label"><i class="ph ph-x-circle"></i> BAD BRIEF (PRODUCES GENERIC OUTPUT)</div>
+        <p>"Create a landing page for my product"</p>
+      </div>
+
+      <div class="best-practice">
+        <div class="best-practice-label"><i class="ph ph-check-circle"></i> GOOD BRIEF (PRODUCES PRODUCTION OUTPUT)</div>
+        <div class="code-block">
+          <button class="copy-btn" onclick="copyCode(this)">COPY</button>
+<pre>## Background
+[Load CONTEXT.md — product, audience, design constraints]
+
+## Requirements
+MUST include:
+- Hero section with headline + subheadline + CTA button
+- Social proof section (3 testimonials)
+- Feature grid (3 columns, icon + title + description)
+- FAQ section (5 questions)
+
+MUST avoid:
+- Gradients, shadows, border-radius (monochrome design system)
+- Generic stock photo language ("team of professionals")
+- More than 2 font families
+
+## Intent
+This landing page collects email signups for beta launch.
+Success = 100 signups in first week. Optimize for conversion.
+
+## Examples
+GOOD: [link to a landing page you admire]
+BAD: [link to what you DON'T want]
+
+## Format
+- Single HTML file with inline CSS
+- Mobile-responsive (min-width: 320px)
+- Semantic HTML5 elements
+- Copy button on any code blocks</pre>
+        </div>
+      </div>
+
+      <h3>Brief Quality vs. Output Quality</h3>
+      <table>
+        <tr><th>Brief Quality</th><th>Iterations</th><th>Output</th><th>Time</th></tr>
+        <tr><td>"Make a landing page"</td><td>8-12</td><td>4/10</td><td>3+ hours</td></tr>
+        <tr><td>Requirements only</td><td>4-6</td><td>6/10</td><td>1.5 hours</td></tr>
+        <tr><td><strong>Full BRIEF framework</strong></td><td>1-2</td><td>8/10</td><td>30 min</td></tr>
+      </table>
+
+      <div class="best-practice">
+        <div class="best-practice-label"><i class="ph ph-check-circle"></i> BEST PRACTICE</div>
+        <div class="do-this">
+          <div class="do-label"><i class="ph ph-check-circle"></i> DO THIS</div>
+          <p>Create a <code>briefs/</code> directory. Save every brief as a <code>.md</code> file. Next time you need something similar, copy, modify, run. Your second brief for the same task type should take 5 minutes.</p>
+        </div>
+        <div class="avoid-this">
+          <div class="avoid-label"><i class="ph ph-x-circle"></i> AVOID THIS</div>
+          <p>Don't over-specify creative tasks. The BRIEF framework is for <strong>predictable tasks</strong> (landing pages, PRDs, reports), not brainstorming.</p>
+        </div>
+      </div>
+
+      <div class="reflection" id="exercise-1-3">
+        <div class="reflection-label"><i class="ph ph-pencil-simple"></i> EXERCISE</div>
+        <h3>Write a Production Brief</h3>
+        <p>Pick your hardest pain point and write a full BRIEF:</p>
+        <ul>
+          <li><strong>Option A</strong> (Teaching): Brief AI to create one workshop session page in HTML</li>
+          <li><strong>Option B</strong> (Product): Brief AI to write a competitive analysis</li>
+          <li><strong>Option C</strong> (Job): Brief AI to generate a tailored CV for a specific posting</li>
+        </ul>
+        <p>Use the BRIEF framework. Include at least 3 MUST-include, 2 MUST-avoid, 1 good example, exact output format.</p>
+
+        <textarea placeholder="Write your BRIEF here..." aria-label="Brief writing workspace"></textarea>
+
+        <div class="success-criteria">
+          <div class="success-criteria-label">SUCCESS CRITERIA</div>
+          <label><input type="checkbox"> All 5 BRIEF sections filled</label>
+          <label><input type="checkbox"> Requirements are specific and testable</label>
+          <label><input type="checkbox"> Anti-patterns come from YOUR real pain points</label>
+          <label><input type="checkbox"> Format specifies exact file type and structure</label>
+          <label><input type="checkbox"> First AI output from this brief scores 7+/10</label>
+        </div>
+      </div>
+
+      <div class="apply-challenge">
+        <div class="apply-challenge-label"><i class="ph ph-lightning"></i> APPLY CHALLENGE</div>
+        <p>Run your brief through AI. Score the output 1-10 on: Accuracy, Completeness, Consistency, Originality. If average &lt; 7, identify which BRIEF section was too vague and strengthen it.</p>
+      </div>
+
+      <!-- ═══════════════════════════════════════ -->
+      <!-- QUIZ -->
+      <!-- ═══════════════════════════════════════ -->
+      <div class="session-divider" id="quiz"></div>
+      <div class="quiz">
+        <div class="quiz-title"><i class="ph ph-exam"></i> LEVEL 1 SELF-CHECK QUIZ</div>
+
+        <div class="quiz-item" data-answer="1">
+          <div class="quiz-question">Q1: Why do ad-hoc prompts produce inconsistent output?</div>
+          <ul class="quiz-options">
+            <li data-option="0" onclick="selectQuiz(this)">A) AI models are random</li>
+            <li data-option="1" onclick="selectQuiz(this)">B) Each conversation starts without product context (cold start problem)</li>
+            <li data-option="2" onclick="selectQuiz(this)">C) You need a more expensive AI model</li>
+            <li data-option="3" onclick="selectQuiz(this)">D) Prompts need to be longer</li>
+          </ul>
+          <div class="quiz-answer">B — The cold start problem means AI has no memory of your product, design system, or past decisions. A persistent Context Foundation solves this.</div>
+        </div>
+
+        <div class="quiz-item" data-answer="1">
+          <div class="quiz-question">Q2: What's the difference between a prompt library and a 3-Layer System?</div>
+          <ul class="quiz-options">
+            <li data-option="0" onclick="selectQuiz(this)">A) Nothing, they're the same</li>
+            <li data-option="1" onclick="selectQuiz(this)">B) A prompt library is Layer 3 only; 3-Layer includes Context and Skills</li>
+            <li data-option="2" onclick="selectQuiz(this)">C) A 3-Layer System requires paid tools</li>
+            <li data-option="3" onclick="selectQuiz(this)">D) A prompt library is more advanced</li>
+          </ul>
+          <div class="quiz-answer">B — A prompt library gives reusable templates (Layer 3), but without Context (Layer 1) and Skill Instructions (Layer 2), outputs remain generic.</div>
+        </div>
+
+        <div class="quiz-item" data-answer="2">
+          <div class="quiz-question">Q3: What format should your research knowledge base use?</div>
+          <ul class="quiz-options">
+            <li data-option="0" onclick="selectQuiz(this)">A) Google Docs</li>
+            <li data-option="1" onclick="selectQuiz(this)">B) Screenshots</li>
+            <li data-option="2" onclick="selectQuiz(this)">C) Structured CSV/Markdown with tagged fields</li>
+            <li data-option="3" onclick="selectQuiz(this)">D) Bookmarked URLs</li>
+          </ul>
+          <div class="quiz-answer">C — Structured data with columns (source, category, insight, confidence, date) allows AI to query and reason over your research.</div>
+        </div>
+
+        <div class="quiz-item" data-answer="1">
+          <div class="quiz-question">Q4: In the BRIEF framework, what does "I" stand for?</div>
+          <ul class="quiz-options">
+            <li data-option="0" onclick="selectQuiz(this)">A) "Implementation" — programming language</li>
+            <li data-option="1" onclick="selectQuiz(this)">B) "Intent" — WHY you need this</li>
+            <li data-option="2" onclick="selectQuiz(this)">C) "Input" — what data to use</li>
+            <li data-option="3" onclick="selectQuiz(this)">D) "Iteration" — how many versions</li>
+          </ul>
+          <div class="quiz-answer">B — Intent helps AI understand the decision context. A landing page for "beta signups" will be designed differently than one for "impressing investors."</div>
+        </div>
+
+        <div class="quiz-item" data-answer="2">
+          <div class="quiz-question">Q5: Output scores 5/10 on consistency. Which layer to fix first?</div>
+          <ul class="quiz-options">
+            <li data-option="0" onclick="selectQuiz(this)">A) Layer 3 (rewrite the prompt)</li>
+            <li data-option="1" onclick="selectQuiz(this)">B) Layer 2 (add style/format instructions)</li>
+            <li data-option="2" onclick="selectQuiz(this)">C) Layer 1 (strengthen Context Foundation)</li>
+            <li data-option="3" onclick="selectQuiz(this)">D) Switch to a different AI model</li>
+          </ul>
+          <div class="quiz-answer">C — Consistency issues almost always trace back to missing context. Strengthen Layer 1 (design tokens, brand voice, anti-patterns) before touching the prompt.</div>
+        </div>
+      </div>
+
+      <!-- Bottom Nav -->
+      <div class="bottom-nav">
+        <a href="../index.html"><i class="ph ph-arrow-left"></i> Hub</a>
+        <a href="level-2-design-build.html">Level 2: Design &amp; Build <i class="ph ph-arrow-right"></i></a>
+      </div>
+
+      <div class="footer">
+        <div class="footer-brand">EaseStart Workshop</div>
+        <p>AI-Powered Product Management &middot; Level 1 of 4</p>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    // Copy button
+    function copyCode(btn) {
+      const pre = btn.parentElement.querySelector('pre');
+      navigator.clipboard.writeText(pre.textContent.trim()).then(() => {
+        btn.textContent = 'COPIED';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.textContent = 'COPY'; btn.classList.remove('copied'); }, 2000);
+      });
+    }
+
+    // Quiz
+    function selectQuiz(li) {
+      const item = li.closest('.quiz-item');
+      const correctAnswer = parseInt(item.dataset.answer);
+      const selectedOption = parseInt(li.dataset.option);
+      const options = item.querySelectorAll('.quiz-options li');
+      const answer = item.querySelector('.quiz-answer');
+
+      options.forEach(o => { o.classList.remove('selected', 'correct', 'incorrect'); });
+
+      if (selectedOption === correctAnswer) {
+        li.classList.add('correct');
+      } else {
+        li.classList.add('incorrect');
+        options[correctAnswer].classList.add('correct');
+      }
+      answer.classList.add('revealed');
+    }
+  </script>
+</body>
+</html>

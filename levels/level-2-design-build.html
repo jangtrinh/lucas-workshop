@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Level 2: Design & Build — From design tokens to production-ready code with AI.">
+  <title>Level 2: Design &amp; Build — Workshop</title>
+  <link rel="stylesheet" href="../shared.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+  <div class="layout">
+    <nav class="sidebar">
+      <div class="sidebar-brand">
+        <h2>Workshop</h2>
+        <p>AI-Powered PM</p>
+      </div>
+      <div class="nav-group">
+        <div class="nav-label">Modules</div>
+        <a href="../index.html" class="nav-link"><i class="ph ph-arrow-left"></i> Hub</a>
+        <a href="level-1-ai-workflow.html" class="nav-link"><span class="nav-stage-num">1</span> AI Workflow</a>
+        <a href="level-2-design-build.html" class="nav-link active"><span class="nav-stage-num">2</span> Design &amp; Build</a>
+      </div>
+      <div class="nav-group">
+        <div class="nav-label">Sessions</div>
+        <a href="#session-2-1" class="nav-link">2.1 Design Systems</a>
+        <a href="#session-2-2" class="nav-link">2.2 Spec to Prototype</a>
+        <a href="#session-2-3" class="nav-link">2.3 Ship Production</a>
+        <a href="#quiz" class="nav-link">Self-Check Quiz</a>
+      </div>
+    </nav>
+
+    <main class="main">
+      <h1>Design &amp; Build</h1>
+      <p class="subtitle">Level 2 &middot; Ship products that look consistent and work correctly.</p>
+
+      <div class="audio-guide" role="region" aria-label="Podcast overview Level 2">
+        <div class="audio-label"><i class="ph ph-headphones"></i> PODCAST — LEVEL 2 OVERVIEW</div>
+        <audio controls preload="none" style="width:100%">
+          <source src="../audio/podcast-level-2.mp3" type="audio/mpeg">
+          Audio not yet generated.
+        </audio>
+      </div>
+
+      <div class="objectives">
+        <div class="objectives-title"><i class="ph ph-target"></i> LEARNING OBJECTIVES</div>
+        <ol>
+          <li>Create a design system (tokens + components + rules) that AI follows consistently</li>
+          <li>Turn a product spec into a clickable HTML prototype in under 2 hours</li>
+          <li>Ship production-ready code with testing and deployment automation</li>
+        </ol>
+      </div>
+
+      <!-- ═══════════════════════════════════════ -->
+      <!-- SESSION 2.1 -->
+      <!-- ═══════════════════════════════════════ -->
+      <div class="session-divider" id="session-2-1"></div>
+      <h2>2.1 DESIGN SYSTEMS WITH AI</h2>
+
+      <div class="audio-guide" role="region" aria-label="Audio guide session 2.1">
+        <div class="audio-label"><i class="ph ph-headphones"></i> SESSION AUDIO</div>
+        <audio controls preload="none" style="width:100%">
+          <source src="../audio/session-2.1-design-systems.wav" type="audio/wav">
+          Audio not yet generated.
+        </audio>
+        <details class="transcript"><summary>TRANSCRIPT</summary><p>Transcript will be added after TTS generation.</p></details>
+      </div>
+
+      <div class="why">
+        <div class="why-label">ATTENTION HOOK — THE $0 DESIGN SYSTEM</div>
+        <p>A solo founder spent 10+ hours/week fixing CSS inconsistencies. Every AI-generated page used different colors, spacing, and button styles. The "fix" seemed obvious: be more specific in prompts.</p>
+        <p>The real fix was <strong>87 lines of CSS variables + a 1-page rules doc</strong>. Total setup: 3 hours. After that, every AI-generated page matched automatically. 40 hours/month of CSS debugging dropped to zero.</p>
+      </div>
+
+      <p><strong>Question for you:</strong> How many hours last month did you spend fixing layout, button styles, or spacing that AI got wrong?</p>
+
+      <h3>Why This Matters</h3>
+      <table>
+        <tr><th>Pain Point</th><th>Missing System Component</th></tr>
+        <tr><td>"Shifting layout"</td><td>No spacing scale or grid system defined</td></tr>
+        <tr><td>"Too many empty spaces"</td><td>No max-width or content density rules</td></tr>
+        <tr><td>"Bad use of design components"</td><td>No component vocabulary with usage rules</td></tr>
+        <tr><td>"Inconsistent design output"</td><td>No design tokens (AI invents new values)</td></tr>
+        <tr><td>"Back and forth button styles"</td><td>No button variants defined</td></tr>
+      </table>
+
+      <h3>Core Concept: Design Tokens</h3>
+      <p>Design tokens are <strong>named variables</strong> that replace hardcoded values. Instead of AI guessing "what shade of gray?", it uses your defined <code>--slate: #4E4B66</code>.</p>
+
+      <div class="code-block">
+        <button class="copy-btn" onclick="copyCode(this)">COPY</button>
+<pre>/* ═══ DESIGN TOKENS ═══ */
+:root {
+  /* Colors (use ONLY these) */
+  --black: #000000;
+  --white: #ffffff;
+  --slate: #4e4b66;
+  --border: #e0e0e0;
+  --bg-muted: #fafafa;
+
+  /* Typography */
+  --font-heading: 'Barlow Condensed', sans-serif;
+  --font-body: system-ui, -apple-system, sans-serif;
+  --font-code: 'SF Mono', 'Fira Code', monospace;
+
+  /* Spacing Scale (8pt grid) */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+
+  /* Layout */
+  --max-width: 800px;
+  --sidebar-width: 240px;
+}</pre>
+      </div>
+
+      <p><strong>Key insight:</strong> When you tell AI "use <code>--slate</code> for secondary text", it does. When you tell AI "use a grayish color", it invents a different gray every time.</p>
+
+      <div class="insight">
+        <div class="insight-label"><i class="ph ph-book-open"></i> CROSS-DOMAIN — ARCHITECTURE'S PATTERN LANGUAGE</div>
+        <p>In 1977, Christopher Alexander published <em>A Pattern Language</em> — every building element has a NAME, a CONTEXT (when to use it), and a RULE (how). Apply the same: each design component has a class name, a usage context, and styling rules.</p>
+      </div>
+
+      <h3>Component Vocabulary</h3>
+      <p>Define each component your AI can use. This becomes your Layer 2:</p>
+
+      <table>
+        <tr><th>Pattern</th><th>When</th><th>Rule</th></tr>
+        <tr><td><code>.why</code></td><td>Explaining rationale/context</td><td>Left black border, muted bg, max 3 sentences</td></tr>
+        <tr><td><code>.reflection</code></td><td>Exercise with user input</td><td>Contains textarea, has success criteria</td></tr>
+        <tr><td><code>.code-block</code></td><td>Showing copyable code</td><td>Dark bg, copy button, monospace font</td></tr>
+        <tr><td><code>.best-practice</code></td><td>Key takeaway</td><td>Bold label, DO THIS / AVOID THIS pair</td></tr>
+        <tr><td><code>.insight</code></td><td>Cross-domain insight</td><td>Muted bg, left border, max 2 sentences</td></tr>
+      </table>
+
+      <div class="best-practice">
+        <div class="best-practice-label"><i class="ph ph-check-circle"></i> BEST PRACTICE</div>
+        <div class="do-this">
+          <div class="do-label"><i class="ph ph-check-circle"></i> DO THIS</div>
+          <p>Create a <code>shared.css</code> as your single source of truth. Every page links to this file. When you change a token, ALL pages update.</p>
+        </div>
+        <div class="avoid-this">
+          <div class="avoid-label"><i class="ph ph-x-circle"></i> AVOID THIS</div>
+          <p>Don't let AI use inline <code>style=""</code> attributes when a CSS class exists. Inline styles bypass your design system and guarantee inconsistency.</p>
+        </div>
+      </div>
+
+      <div class="reflection" id="exercise-2-1">
+        <div class="reflection-label"><i class="ph ph-pencil-simple"></i> EXERCISE</div>
+        <h3>Build Your Design Token File</h3>
+        <p>Create a <code>shared.css</code> for your project with:</p>
+        <ol>
+          <li><strong>Color tokens</strong> (max 6 colors)</li>
+          <li><strong>Typography</strong> (heading font, body font, code font, 3 sizes)</li>
+          <li><strong>Spacing scale</strong> (at least 5 values on 4pt or 8pt grid)</li>
+          <li><strong>3 component classes</strong> with full styles</li>
+        </ol>
+
+        <textarea placeholder="Paste your shared.css code here to review..." aria-label="Design token workspace"></textarea>
+
+        <div class="success-criteria">
+          <div class="success-criteria-label">SUCCESS CRITERIA</div>
+          <label><input type="checkbox"> Max 6 color tokens</label>
+          <label><input type="checkbox"> All spacing uses your scale (no magic numbers)</label>
+          <label><input type="checkbox"> Component classes handle padding, border, bg, typography</label>
+          <label><input type="checkbox"> File is under 150 lines</label>
+          <label><input type="checkbox"> AI produces consistent output using only these tokens</label>
+        </div>
+      </div>
+
+      <div class="apply-challenge">
+        <div class="apply-challenge-label"><i class="ph ph-lightning"></i> APPLY CHALLENGE</div>
+        <p>Take an existing page from your teaching materials or Elfie product. Identify 5 places where hardcoded values should be replaced with design tokens. Refactor them. Compare before/after consistency.</p>
+      </div>
+
+      <!-- ═══════════════════════════════════════ -->
+      <!-- SESSION 2.2 -->
+      <!-- ═══════════════════════════════════════ -->
+      <div class="session-divider" id="session-2-2"></div>
+      <h2>2.2 FROM SPEC TO PROTOTYPE</h2>
+
+      <div class="audio-guide" role="region" aria-label="Audio guide session 2.2">
+        <div class="audio-label"><i class="ph ph-headphones"></i> SESSION AUDIO</div>
+        <audio controls preload="none" style="width:100%">
+          <source src="../audio/session-2.2-spec-prototype.wav" type="audio/wav">
+          Audio not yet generated.
+        </audio>
+        <details class="transcript"><summary>TRANSCRIPT</summary><p>Transcript will be added after TTS generation.</p></details>
+      </div>
+
+      <div class="why">
+        <div class="why-label">ATTENTION HOOK — THE 2-HOUR PROTOTYPE CHALLENGE</div>
+        <p>At a Y Combinator startup, the product team challenged themselves: napkin sketch to clickable HTML prototype in 2 hours? With a design system + AI + structured briefs, they consistently hit the mark. Without those systems? Average: 2 days.</p>
+        <p>The difference wasn't talent. It was <strong>preparation</strong>: design tokens loaded, component library ready, brief template filled.</p>
+      </div>
+
+      <h3>Core Concept: The Spec-to-HTML Pipeline</h3>
+      <div class="code-block">
+        <button class="copy-btn" onclick="copyCode(this)">COPY</button>
+<pre>┌────────────┐     ┌────────────┐     ┌────────────┐     ┌────────────┐
+│   BRIEF    │────▶│  GENERATE  │────▶│  VALIDATE  │────▶│  ITERATE   │
+│            │     │            │     │            │     │            │
+│ Load:      │     │ AI builds  │     │ Check:     │     │ Fix only   │
+│ - Context  │     │ HTML using │     │ - Tokens   │     │ FAILED     │
+│ - Tokens   │     │ your design│     │ - Layout   │     │ checks     │
+│ - Components│    │ system     │     │ - Content  │     │ (targeted) │
+│ - This spec│     │            │     │ - Mobile   │     │            │
+└────────────┘     └────────────┘     └────────────┘     └────────────┘
+     1 brief          1 output         5-point check       0-2 fixes</pre>
+      </div>
+
+      <h3>The 5-Point Validation Checklist</h3>
+      <table>
+        <tr><th>#</th><th>Check</th><th>How to Verify</th></tr>
+        <tr><td>1</td><td><strong>Token compliance</strong></td><td>Cmd+F for hardcoded color/spacing values</td></tr>
+        <tr><td>2</td><td><strong>Component usage</strong></td><td>Every visual block uses a defined class</td></tr>
+        <tr><td>3</td><td><strong>Content accuracy</strong></td><td>Headings, copy, and data match spec</td></tr>
+        <tr><td>4</td><td><strong>Mobile responsive</strong></td><td>Resize browser to 375px — nothing breaks</td></tr>
+        <tr><td>5</td><td><strong>Interactive elements</strong></td><td>Click all buttons, expand all details, test links</td></tr>
+      </table>
+
+      <div class="insight">
+        <div class="insight-label"><i class="ph ph-book-open"></i> CROSS-DOMAIN — AVIATION PRE-FLIGHT CHECKLISTS</div>
+        <p>Pilots don't skip checklists even after 10,000 flights. The checklist prevents the expert from forgetting the basics under pressure. Your 5-point validation works the same way.</p>
+      </div>
+
+      <div class="best-practice">
+        <div class="best-practice-label"><i class="ph ph-check-circle"></i> BEST PRACTICE — STRUCTURED SPEC FORMAT</div>
+        <div class="code-block">
+          <button class="copy-btn" onclick="copyCode(this)">COPY</button>
+<pre># Page: [Page Name]
+
+## Layout
+- Max width: 800px, centered
+- Sidebar: 240px, fixed left (desktop only)
+
+## Sections (top to bottom)
+1. Hero: h1 title + subtitle + CTA button
+2. Problem: .why box explaining the pain
+3. Solution: 3-column feature grid
+4. Social proof: 3 testimonial cards
+5. CTA: email signup form
+
+## Content
+- Hero headline: "[Specific headline]"
+- Hero subtitle: "[Specific subtitle]"
+- CTA button: "[Button text]" → links to #signup
+
+## Interactions
+- CTA button: hover state (invert colors)
+- Mobile: stack columns, hide sidebar</pre>
+        </div>
+      </div>
+
+      <div class="reflection" id="exercise-2-2">
+        <div class="reflection-label"><i class="ph ph-pencil-simple"></i> EXERCISE</div>
+        <h3>Spec to Prototype in 90 Minutes</h3>
+        <p>Write a spec for ONE page and generate it with AI:</p>
+        <ul>
+          <li><strong>Option A</strong>: Workshop level page with sidebar + 2 sessions</li>
+          <li><strong>Option B</strong>: Product landing page with hero + features + CTA</li>
+          <li><strong>Option C</strong>: Portfolio page showcasing 3 projects</li>
+        </ul>
+        <p><strong>Steps:</strong> Write spec (20 min) → Combine with CONTEXT.md + shared.css (5 min) → Generate HTML (2 min AI) → Run 5-point checklist (10 min) → Fix failures.</p>
+
+        <textarea placeholder="Write your page spec here..." aria-label="Spec writing workspace"></textarea>
+
+        <div class="success-criteria">
+          <div class="success-criteria-label">SUCCESS CRITERIA</div>
+          <label><input type="checkbox"> Spec has Layout, Sections, Content, Interactions</label>
+          <label><input type="checkbox"> Generated HTML passes 4/5 validation checks first try</label>
+          <label><input type="checkbox"> Total time: spec to working prototype under 90 min</label>
+          <label><input type="checkbox"> Page uses ONLY your design tokens</label>
+          <label><input type="checkbox"> Page is readable at 375px mobile width</label>
+        </div>
+      </div>
+
+      <div class="apply-challenge">
+        <div class="apply-challenge-label"><i class="ph ph-lightning"></i> APPLY CHALLENGE</div>
+        <p>Take a competing product's landing page. Write a spec that describes it <strong>structurally</strong> (not visually). Feed your spec + YOUR design system to AI. The result: same information architecture, YOUR visual identity.</p>
+      </div>
+
+      <!-- ═══════════════════════════════════════ -->
+      <!-- SESSION 2.3 -->
+      <!-- ═══════════════════════════════════════ -->
+      <div class="session-divider" id="session-2-3"></div>
+      <h2>2.3 SHIP PRODUCTION CODE</h2>
+
+      <div class="audio-guide" role="region" aria-label="Audio guide session 2.3">
+        <div class="audio-label"><i class="ph ph-headphones"></i> SESSION AUDIO</div>
+        <audio controls preload="none" style="width:100%">
+          <source src="../audio/session-2.3-ship-production.wav" type="audio/wav">
+          Audio not yet generated.
+        </audio>
+        <details class="transcript"><summary>TRANSCRIPT</summary><p>Transcript will be added after TTS generation.</p></details>
+      </div>
+
+      <div class="why">
+        <div class="why-label">ATTENTION HOOK — "IT WORKS ON MY MACHINE"</div>
+        <p>You built a beautiful prototype. It works locally. You show it to someone — fonts wrong, layout breaks, images don't load.</p>
+        <p>The gap between "prototype" and "production" is systematic: relative paths, CDN dependencies, error states, loading states, mobile breakpoints, accessibility, SEO meta tags, and deployment config.</p>
+      </div>
+
+      <h3>Why This Matters</h3>
+      <p>Your pain point: <em>"Continuous iteration due to simple CSS errors"</em> and <em>"Changing outputs here and there."</em></p>
+      <p>These errors happen because iteration is <strong>uncontrolled</strong> — you fix one thing, break another. Production workflow: test before deploy, version changes, never push untested code.</p>
+
+      <h3>Core Concept: The 8-Point Hardening Checklist</h3>
+      <div class="code-block">
+        <button class="copy-btn" onclick="copyCode(this)">COPY</button>
+<pre>CRITICAL (must pass before deploy):
+[ ] 1. All paths are relative (../shared.css, not /Users/me/...)
+[ ] 2. External dependencies have CDN fallbacks
+[ ] 3. All images have alt text + relative paths
+[ ] 4. Mobile responsive: tested at 375px, 768px, 1024px
+[ ] 5. All interactive elements work (buttons, links, forms)
+
+IMPORTANT (should pass):
+[ ] 6. Semantic HTML: lang, heading hierarchy, aria-labels
+[ ] 7. Meta tags: title, description, Open Graph
+[ ] 8. Performance: no images > 500KB, no unused CSS/JS</pre>
+      </div>
+
+      <h3>The Iteration Safety Net</h3>
+      <p><strong>Problem:</strong> You fix a CSS bug on page 3, it breaks page 1.</p>
+      <p><strong>Solution:</strong> Always edit <code>shared.css</code> tokens, never inline styles. Token changes propagate safely.</p>
+
+      <table>
+        <tr><th>Safe Workflow</th><th>Dangerous Workflow</th></tr>
+        <tr><td>1. Make change in shared.css</td><td>1. Make change</td></tr>
+        <tr><td>2. Check changed page</td><td>2. Push immediately</td></tr>
+        <tr><td>3. Spot-check 1 other page</td><td>3. Discover it broke something</td></tr>
+        <tr><td>4. Commit with message</td><td>4. Panic-fix</td></tr>
+        <tr><td>5. Push (auto-deploy)</td><td>5. Push again, repeat</td></tr>
+      </table>
+
+      <div class="insight">
+        <div class="insight-label"><i class="ph ph-book-open"></i> CROSS-DOMAIN — SOFTWARE CI/CD</div>
+        <p>In software engineering, nobody deploys manually. Push code, automated tests run, if tests pass, auto-deploy. Apply the same: Git + GitHub Pages + deploy workflow = push to live in 30 seconds.</p>
+      </div>
+
+      <div class="best-practice">
+        <div class="best-practice-label"><i class="ph ph-check-circle"></i> BEST PRACTICE — GIT COMMIT MESSAGES</div>
+        <div class="do-this">
+          <div class="do-label"><i class="ph ph-check-circle"></i> DO THIS</div>
+          <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">COPY</button>
+<pre>git commit -m "fix: sidebar nav links in level-2 page"
+git commit -m "feat: add audio players to level-1 sessions"
+git commit -m "style: increase body font to 20px"</pre>
+          </div>
+        </div>
+        <div class="avoid-this">
+          <div class="avoid-label"><i class="ph ph-x-circle"></i> AVOID THIS</div>
+          <div class="code-block">
+<pre>git commit -m "update"
+git commit -m "fix stuff"
+git commit -m "asdf"</pre>
+          </div>
+        </div>
+      </div>
+
+      <h3>GitHub Pages Deploy Workflow</h3>
+      <div class="code-block">
+        <button class="copy-btn" onclick="copyCode(this)">COPY</button>
+<pre># .github/workflows/deploy.yml
+name: Deploy to GitHub Pages
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+      - id: deployment
+        uses: actions/deploy-pages@v4</pre>
+      </div>
+
+      <div class="reflection" id="exercise-2-3">
+        <div class="reflection-label"><i class="ph ph-pencil-simple"></i> EXERCISE</div>
+        <h3>Harden and Deploy</h3>
+        <p>Take your prototype from Session 2.2 and make it production-ready:</p>
+        <ol>
+          <li><strong>Run the 8-point hardening checklist</strong> — fix all failures</li>
+          <li><strong>Initialize Git repo</strong> — <code>git init &amp;&amp; git add -A &amp;&amp; git commit -m "feat: initial prototype"</code></li>
+          <li><strong>Set up GitHub Pages</strong> — create repo, add deploy workflow, push</li>
+          <li><strong>Verify live site</strong> — open URL, test on mobile, click everything</li>
+        </ol>
+
+        <textarea placeholder="Notes on your deployment process..." aria-label="Deployment workspace"></textarea>
+
+        <div class="success-criteria">
+          <div class="success-criteria-label">SUCCESS CRITERIA</div>
+          <label><input type="checkbox"> All 8 hardening checklist items pass</label>
+          <label><input type="checkbox"> Site is live on GitHub Pages (real URL)</label>
+          <label><input type="checkbox"> Site loads correctly on mobile</label>
+          <label><input type="checkbox"> All interactive elements work live</label>
+          <label><input type="checkbox"> Change-to-live cycle under 2 minutes</label>
+        </div>
+      </div>
+
+      <div class="apply-challenge">
+        <div class="apply-challenge-label"><i class="ph ph-lightning"></i> APPLY CHALLENGE</div>
+        <p>Make 3 small changes to your live site: (1) change a heading, (2) add a section, (3) fix a CSS value. For each: edit, test locally, commit, push, verify live. Goal: each cycle under 2 minutes.</p>
+      </div>
+
+      <!-- ═══════════════════════════════════════ -->
+      <!-- QUIZ -->
+      <!-- ═══════════════════════════════════════ -->
+      <div class="session-divider" id="quiz"></div>
+      <div class="quiz">
+        <div class="quiz-title"><i class="ph ph-exam"></i> LEVEL 2 SELF-CHECK QUIZ</div>
+
+        <div class="quiz-item" data-answer="1">
+          <div class="quiz-question">Q1: What are design tokens?</div>
+          <ul class="quiz-options">
+            <li data-option="0" onclick="selectQuiz(this)">A) Free icons from the internet</li>
+            <li data-option="1" onclick="selectQuiz(this)">B) Named CSS variables replacing hardcoded values</li>
+            <li data-option="2" onclick="selectQuiz(this)">C) Login credentials for design tools</li>
+            <li data-option="3" onclick="selectQuiz(this)">D) Placeholder images</li>
+          </ul>
+          <div class="quiz-answer">B — Design tokens are named variables (like <code>--slate: #4E4B66</code>) that ensure AI uses YOUR specific values instead of inventing new ones.</div>
+        </div>
+
+        <div class="quiz-item" data-answer="1">
+          <div class="quiz-question">Q2: AI-generated page uses 3 different grays. Root cause?</div>
+          <ul class="quiz-options">
+            <li data-option="0" onclick="selectQuiz(this)">A) The AI model is outdated</li>
+            <li data-option="1" onclick="selectQuiz(this)">B) You didn't specify color tokens in the prompt/context</li>
+            <li data-option="2" onclick="selectQuiz(this)">C) Gray is hard for AI</li>
+            <li data-option="3" onclick="selectQuiz(this)">D) You need a different AI</li>
+          </ul>
+          <div class="quiz-answer">B — Without explicit color tokens, AI defaults to its own interpretation. Load your <code>shared.css</code> with exact values.</div>
+        </div>
+
+        <div class="quiz-item" data-answer="1">
+          <div class="quiz-question">Q3: Purpose of the 5-point validation checklist?</div>
+          <ul class="quiz-options">
+            <li data-option="0" onclick="selectQuiz(this)">A) To slow things down</li>
+            <li data-option="1" onclick="selectQuiz(this)">B) Catch systematic errors before they compound</li>
+            <li data-option="2" onclick="selectQuiz(this)">C) To impress stakeholders</li>
+            <li data-option="3" onclick="selectQuiz(this)">D) Generate documentation</li>
+          </ul>
+          <div class="quiz-answer">B — Each uncaught error in iteration 1 becomes 2-3 errors by iteration 5. The checklist prevents compounding.</div>
+        </div>
+
+        <div class="quiz-item" data-answer="0">
+          <div class="quiz-question">Q4: Fixed CSS on Level 2 and broke Level 1. What to do differently?</div>
+          <ul class="quiz-options">
+            <li data-option="0" onclick="selectQuiz(this)">A) Edit shared.css tokens instead of inline styles</li>
+            <li data-option="1" onclick="selectQuiz(this)">B) Use a different browser</li>
+            <li data-option="2" onclick="selectQuiz(this)">C) Fix Level 1 first</li>
+            <li data-option="3" onclick="selectQuiz(this)">D) Avoid CSS entirely</li>
+          </ul>
+          <div class="quiz-answer">A — Changes to <code>shared.css</code> tokens propagate consistently. Inline edits on one page bypass the system.</div>
+        </div>
+
+        <div class="quiz-item" data-answer="1">
+          <div class="quiz-question">Q5: Minimum for automated deployment?</div>
+          <ul class="quiz-options">
+            <li data-option="0" onclick="selectQuiz(this)">A) A paid hosting service</li>
+            <li data-option="1" onclick="selectQuiz(this)">B) GitHub repo + GitHub Pages deploy workflow (free)</li>
+            <li data-option="2" onclick="selectQuiz(this)">C) A DevOps team</li>
+            <li data-option="3" onclick="selectQuiz(this)">D) Docker and Kubernetes</li>
+          </ul>
+          <div class="quiz-answer">B — GitHub Pages + a simple deploy YAML = automated deployments for free. Push to live in 30 seconds.</div>
+        </div>
+      </div>
+
+      <!-- Bottom Nav -->
+      <div class="bottom-nav">
+        <a href="level-1-ai-workflow.html"><i class="ph ph-arrow-left"></i> Level 1: AI Workflow</a>
+        <span style="color:var(--border)">Level 3: Coming Soon</span>
+      </div>
+
+      <div class="footer">
+        <div class="footer-brand">EaseStart Workshop</div>
+        <p>AI-Powered Product Management &middot; Level 2 of 4</p>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    function copyCode(btn) {
+      const pre = btn.parentElement.querySelector('pre');
+      navigator.clipboard.writeText(pre.textContent.trim()).then(() => {
+        btn.textContent = 'COPIED';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.textContent = 'COPY'; btn.classList.remove('copied'); }, 2000);
+      });
+    }
+
+    function selectQuiz(li) {
+      const item = li.closest('.quiz-item');
+      const correctAnswer = parseInt(item.dataset.answer);
+      const selectedOption = parseInt(li.dataset.option);
+      const options = item.querySelectorAll('.quiz-options li');
+      const answer = item.querySelector('.quiz-answer');
+      options.forEach(o => { o.classList.remove('selected', 'correct', 'incorrect'); });
+      if (selectedOption === correctAnswer) {
+        li.classList.add('correct');
+      } else {
+        li.classList.add('incorrect');
+        options[correctAnswer].classList.add('correct');
+      }
+      answer.classList.add('revealed');
+    }
+  </script>
+</body>
+</html>

@@ -178,6 +178,16 @@ Key Gemini capabilities:
         </ol>
         <p>Pick the simplest task and write its full agent specification below.</p>
 
+        <h4>Friction Gate: What to Keep Manual</h4>
+        <p>Before automating, score each task. If Learning Value > 3, add a human checkpoint — don't fully automate.</p>
+        <table>
+          <tr><th>Task</th><th>Error Cost (1-5)</th><th>Learning Value (1-5)</th><th>Frequency Burden (1-5)</th><th>Verdict</th></tr>
+          <tr><td>Task 1: ___</td><td></td><td></td><td></td><td>Automate / Checkpoint / Keep manual</td></tr>
+          <tr><td>Task 2: ___</td><td></td><td></td><td></td><td></td></tr>
+          <tr><td>Task 3: ___</td><td></td><td></td><td></td><td></td></tr>
+        </table>
+        <p><strong>Rule:</strong> High error cost + high learning value = human-in-the-loop (agent proposes, you approve). High frequency + low learning = fully automate. This prevents deskilling — the same phenomenon that caused doctors to miss 6% more diagnoses when they let AI decide for them (Lancet 2025).</p>
+
         <textarea placeholder="Task 1: [name]&#10;Trigger: ...&#10;Decision: ...&#10;Functions: ...&#10;Output schema: {...}&#10;&#10;Task 2: [name]&#10;...&#10;&#10;FULL SPEC for simplest task:&#10;..." aria-label="Agent specification workspace"></textarea>
 
         <div class="success-criteria">

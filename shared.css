@@ -13,10 +13,10 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: var(--sf); background: var(--white); color: var(--black); line-height: 1.6; -webkit-font-smoothing: antialiased; }
 
-/* ══ Layout ══ */
+/* ══ Layout — Flex-based, no fixed positioning ══ */
 .layout { display: flex; min-height: 100vh; }
-.sidebar { width: 240px; background: var(--black); padding: 24px 0; position: fixed; top: 0; left: 0; bottom: 0; overflow-y: auto; z-index: 10; }
-.main { margin-left: 240px; flex: 1; padding: 50px 73px; max-width: calc(1000px + 240px); }
+.sidebar { flex: 0 0 240px; background: var(--black); padding: 24px 0; overflow-y: auto; z-index: 10; position: sticky; top: 0; height: 100vh; }
+.main { flex: 1; min-width: 0; padding: 50px clamp(20px, 5vw, 73px); max-width: 1000px; }
 
 /* ══ Sidebar ══ */
 .sidebar-brand { padding: 0 20px 20px; border-bottom: 1px solid #333; margin-bottom: 16px; }
@@ -29,36 +29,36 @@ body { font-family: var(--sf); background: var(--white); color: var(--black); li
 .nav-link.active { background: var(--white); color: var(--black); font-weight: 600; }
 .nav-stage-num { display: inline-block; width: 18px; font-family: var(--heading); font-weight: 700; }
 
-/* ══ Typography ══ */
-h1 { font-family: var(--heading); font-size: 56px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; line-height: 1.1; margin-bottom: 12px; }
-h2 { font-family: var(--heading); font-size: 36px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin: 48px 0 16px; padding-bottom: 8px; border-bottom: 3px solid var(--black); }
-h3 { font-size: 22px; font-weight: 700; margin: 32px 0 12px; }
-h4 { font-size: 16px; font-weight: 700; color: var(--slate); text-transform: uppercase; letter-spacing: 2px; margin: 24px 0 8px; }
-p { font-size: 20px; margin-bottom: 12px; line-height: 28px; }
-.subtitle { font-size: 20px; color: var(--slate); margin-bottom: 32px; }
-ul, ol { font-size: 20px; line-height: 28px; margin: 8px 0 16px; padding-left: 24px; }
+/* ══ Typography — Fluid scaling ══ */
+h1 { font-family: var(--heading); font-size: clamp(28px, 7vw, 56px); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; line-height: 1.1; margin-bottom: 12px; }
+h2 { font-family: var(--heading); font-size: clamp(22px, 4.5vw, 36px); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin: clamp(24px, 4vw, 48px) 0 16px; padding-bottom: 8px; border-bottom: 3px solid var(--black); }
+h3 { font-size: clamp(17px, 2.5vw, 22px); font-weight: 700; margin: clamp(20px, 3vw, 32px) 0 12px; }
+h4 { font-size: clamp(14px, 1.8vw, 16px); font-weight: 700; color: var(--slate); text-transform: uppercase; letter-spacing: 2px; margin: 24px 0 8px; }
+p { font-size: clamp(16px, 2.2vw, 20px); margin-bottom: 12px; line-height: 1.5; }
+.subtitle { font-size: clamp(16px, 2.2vw, 20px); color: var(--slate); margin-bottom: clamp(20px, 3vw, 32px); }
+ul, ol { font-size: clamp(16px, 2.2vw, 20px); line-height: 1.5; margin: 8px 0 16px; padding-left: 24px; }
 li { margin-bottom: 6px; }
 
 /* ══ Objectives Block ══ */
-.objectives { border: 3px solid var(--black); padding: 28px; margin: 24px 0 40px; }
-.objectives-title { font-family: var(--heading); font-size: 22px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+.objectives { border: 3px solid var(--black); padding: clamp(16px, 3vw, 28px); margin: 24px 0 40px; }
+.objectives-title { font-family: var(--heading); font-size: clamp(18px, 2.5vw, 22px); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
 .objectives ol { margin: 0; padding-left: 24px; }
-.objectives li { font-size: 18px; margin-bottom: 8px; }
+.objectives li { font-size: clamp(15px, 2vw, 18px); margin-bottom: 8px; }
 
 /* ══ Why / Rationale ══ */
-.why { background: var(--bg-muted); border-left: 4px solid var(--black); padding: 20px 24px; margin: 16px 0; }
+.why { background: var(--bg-muted); border-left: 4px solid var(--black); padding: clamp(14px, 2.5vw, 20px) clamp(16px, 3vw, 24px); margin: 16px 0; }
 .why-label { font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--slate); margin-bottom: 6px; }
 
 /* ══ Insight ══ */
-.insight { background: var(--bg-muted); border-left: 4px solid var(--black); padding: 20px 24px; margin: 16px 0; font-size: 20px; line-height: 28px; }
+.insight { background: var(--bg-muted); border-left: 4px solid var(--black); padding: clamp(14px, 2.5vw, 20px) clamp(16px, 3vw, 24px); margin: 16px 0; font-size: clamp(16px, 2.2vw, 20px); line-height: 1.5; }
 .insight-label { font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--slate); margin-bottom: 6px; }
 
 /* ══ Warning ══ */
-.warning { background: var(--bg-muted); border-left: 4px solid var(--slate); padding: 20px 24px; margin: 16px 0; }
+.warning { background: var(--bg-muted); border-left: 4px solid var(--slate); padding: clamp(14px, 2.5vw, 20px) clamp(16px, 3vw, 24px); margin: 16px 0; }
 .warning-label { font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--slate); margin-bottom: 6px; }
 
 /* ══ Best Practice ══ */
-.best-practice { border: 3px solid var(--black); padding: 24px; margin: 24px 0; }
+.best-practice { border: 3px solid var(--black); padding: clamp(16px, 3vw, 24px); margin: 24px 0; }
 .best-practice-label { font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
 .best-practice .do-this { margin-bottom: 16px; }
 .best-practice .do-this p, .best-practice .avoid-this p { font-size: 18px; line-height: 26px; }
@@ -66,7 +66,7 @@ li { margin-bottom: 6px; }
 .avoid-label { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--slate); margin-bottom: 4px; }
 
 /* ══ Reflection / Exercise ══ */
-.reflection { border: 3px solid var(--black); padding: 28px; margin: 32px 0; background: var(--white); }
+.reflection { border: 3px solid var(--black); padding: clamp(16px, 3vw, 28px); margin: 32px 0; background: var(--white); }
 .reflection-label { font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--slate); margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
 .reflection h3 { margin-top: 0; }
 .reflection p { font-size: 18px; }
@@ -84,19 +84,19 @@ li { margin-bottom: 6px; }
 
 /* ══ Code Block ══ */
 .code-block { position: relative; margin: 16px 0; }
-.code-block pre { background: var(--black); color: var(--white); padding: 20px 24px; padding-right: 80px; font-family: var(--mono); font-size: 15px; line-height: 1.7; white-space: pre-wrap; word-wrap: break-word; overflow-x: auto; max-height: 500px; overflow-y: auto; }
+.code-block pre { background: var(--black); color: var(--white); padding: clamp(14px, 2vw, 20px) clamp(16px, 2.5vw, 24px); padding-right: clamp(50px, 8vw, 80px); font-family: var(--mono); font-size: clamp(13px, 1.6vw, 15px); line-height: 1.7; white-space: pre-wrap; word-wrap: break-word; overflow-x: auto; max-height: 500px; overflow-y: auto; }
 .copy-btn { position: absolute; top: 10px; right: 10px; background: transparent; color: var(--white); border: 1px solid rgba(255,255,255,0.4); padding: 4px 14px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; transition: all 0.15s; font-family: var(--sf); z-index: 1; }
 .copy-btn:hover { background: var(--white); color: var(--black); }
 .copy-btn.copied { background: var(--white); color: var(--black); }
 
 /* ══ Tables ══ */
 table { width: 100%; border-collapse: collapse; margin: 12px 0 20px; }
-th { text-align: left; font-size: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; padding: 10px 14px; border-bottom: 3px solid var(--black); }
-td { font-size: 18px; padding: 12px 14px; border-bottom: 1px solid var(--border); line-height: 26px; }
+th { text-align: left; font-size: clamp(12px, 1.8vw, 16px); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; padding: clamp(6px, 1vw, 10px) clamp(8px, 1.5vw, 14px); border-bottom: 3px solid var(--black); }
+td { font-size: clamp(14px, 2vw, 18px); padding: clamp(8px, 1.2vw, 12px) clamp(8px, 1.5vw, 14px); border-bottom: 1px solid var(--border); line-height: 1.5; }
 tr:last-child td { border-bottom: none; }
 
 /* ══ Audio Guide ══ */
-.audio-guide { margin: 20px 0; padding: 16px 20px; background: var(--bg-muted); border-left: 3px solid var(--black); }
+.audio-guide { margin: 20px 0; padding: clamp(12px, 2vw, 16px) clamp(14px, 2.5vw, 20px); background: var(--bg-muted); border-left: 3px solid var(--black); }
 .audio-label { font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--slate); margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
 .audio-guide audio { width: 100%; margin: 8px 0 4px; }
 .transcript { margin-top: 8px; }
@@ -104,13 +104,13 @@ tr:last-child td { border-bottom: none; }
 .transcript p { font-size: 16px; color: var(--slate); line-height: 1.6; margin-top: 8px; }
 
 /* ══ Quiz ══ */
-.quiz { border: 3px solid var(--black); padding: 28px; margin: 48px 0; }
+.quiz { border: 3px solid var(--black); padding: clamp(16px, 3vw, 28px); margin: 48px 0; }
 .quiz-title { font-family: var(--heading); font-size: 28px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 24px; }
 .quiz-item { padding: 20px 0; border-bottom: 1px solid var(--border); }
 .quiz-item:last-child { border-bottom: none; }
 .quiz-question { font-size: 20px; font-weight: 600; margin-bottom: 12px; }
 .quiz-options { list-style: none; padding: 0; margin: 0 0 12px; }
-.quiz-options li { font-size: 18px; padding: 8px 16px; margin-bottom: 4px; cursor: pointer; transition: all 0.15s; }
+.quiz-options li { font-size: clamp(15px, 2vw, 18px); padding: clamp(10px, 1.5vw, 8px) 16px; margin-bottom: 4px; cursor: pointer; transition: all 0.15s; min-height: 44px; display: flex; align-items: center; }
 .quiz-options li:hover { background: var(--bg-muted); }
 .quiz-options li.selected { border-left: 4px solid var(--black); background: var(--bg-muted); font-weight: 600; }
 .quiz-options li.correct { border-left: 4px solid var(--accent); background: #f0fdf4; }
@@ -128,10 +128,10 @@ details.advanced > div { padding: 16px; }
 
 /* ══ Cards (Hub) ══ */
 .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0; }
-.card { background: var(--white); border: 1px solid var(--border); padding: 28px; text-decoration: none; transition: all 0.15s; display: block; color: var(--black); }
+.card { background: var(--white); border: 1px solid var(--border); padding: clamp(16px, 3vw, 28px); text-decoration: none; transition: all 0.15s; display: block; color: var(--black); }
 .card:hover { border-color: var(--black); }
 .card-tag { font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--slate); margin-bottom: 6px; }
-.card h3 { font-family: var(--heading); font-size: 32px; font-weight: 700; text-transform: uppercase; margin: 0 0 6px; letter-spacing: 1px; }
+.card h3 { font-family: var(--heading); font-size: clamp(22px, 3.5vw, 32px); font-weight: 700; text-transform: uppercase; margin: 0 0 6px; letter-spacing: 1px; }
 .card p { font-size: 17px; color: var(--slate); margin: 0; }
 .card .session-count { font-size: 13px; color: var(--slate); text-transform: uppercase; letter-spacing: 1px; margin-top: 12px; }
 
@@ -144,7 +144,7 @@ details.advanced > div { padding: 16px; }
 .session-divider { margin: 64px 0 0; }
 
 /* ══ Apply Challenge ══ */
-.apply-challenge { border: 3px solid var(--black); padding: 28px; margin: 32px 0; background: var(--bg-muted); }
+.apply-challenge { border: 3px solid var(--black); padding: clamp(16px, 3vw, 28px); margin: 32px 0; background: var(--bg-muted); }
 .apply-challenge-label { font-family: var(--heading); font-size: 20px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
 
 /* ══ Footer ══ */
@@ -166,65 +166,33 @@ details.advanced > div { padding: 16px; }
 }
 .sidebar-overlay.open { display: block; }
 
-/* ══ Responsive: Tablet + Mobile (≤768px) ══ */
+/* ══ Responsive: ≤768px — Layout changes only (fonts/padding already fluid via clamp) ══ */
 @media (max-width: 768px) {
-  /* Navigation: hamburger + slide-in sidebar */
+  /* Sidebar → hamburger overlay */
   .menu-toggle { display: flex; }
   .sidebar {
+    position: fixed; top: 0; left: 0; bottom: 0;
     transform: translateX(-100%);
     transition: transform 0.25s ease;
   }
   .sidebar.open { transform: translateX(0); }
-  .main { margin-left: 0; padding: 56px 20px 32px; }
 
-  /* Typography: fluid scaling */
-  h1 { font-size: clamp(28px, 8vw, 36px); }
-  h2 { font-size: clamp(22px, 6vw, 28px); margin-top: 32px; }
-  h3 { font-size: 18px; margin: 24px 0 10px; }
-  p, ul, ol { font-size: 17px; line-height: 26px; }
-  .subtitle { font-size: 17px; margin-bottom: 24px; }
+  /* Main takes full width */
+  .main { padding-top: 56px; }
 
-  /* Grid: single column */
+  /* Grid → single column */
   .grid { grid-template-columns: 1fr; }
 
-  /* Tables: horizontal scroll */
+  /* Tables → horizontal scroll */
   table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
-  th { font-size: 13px; padding: 8px 10px; }
-  td { font-size: 15px; padding: 10px; line-height: 22px; }
 
-  /* Content boxes: tighter padding */
-  .objectives { padding: 16px; }
-  .objectives li { font-size: 16px; }
-  .why, .insight, .warning, .audio-guide { padding: 14px 16px; }
-  .reflection { padding: 16px; }
-  .reflection textarea { padding: 12px; font-size: 14px; min-height: 120px; }
-  .quiz { padding: 16px; }
-  .quiz-title { font-size: 22px; }
-  .best-practice { padding: 16px; }
-  .apply-challenge { padding: 16px; }
-
-  /* Code blocks: smaller font, tighter padding */
-  .code-block pre { padding: 14px 16px; padding-right: 56px; font-size: 13px; line-height: 1.6; }
-  .copy-btn { padding: 3px 10px; font-size: 10px; }
-
-  /* Touch targets: minimum 44px per Apple HIG */
-  .quiz-options li { padding: 14px 16px; margin-bottom: 6px; min-height: 44px; }
-  .success-criteria label { padding: 6px 0; min-height: 44px; align-items: center; }
-  .nav-link { padding: 12px 12px; min-height: 44px; display: flex; align-items: center; }
-
-  /* Bottom nav: reduce font, allow wrapping */
-  .bottom-nav a { font-size: 16px; padding: 14px 0; }
-
-  /* Cards */
-  .card { padding: 20px; }
-  .card h3 { font-size: 24px; }
+  /* Session divider → less margin */
+  .session-divider { margin-top: 40px; }
 }
 
-/* ══ Responsive: Small phones (≤480px) ══ */
+/* ══ Responsive: ≤480px — Stack bottom nav ══ */
 @media (max-width: 480px) {
   .bottom-nav { flex-direction: column; gap: 8px; }
-  .main { padding: 52px 16px 24px; }
-  h1 { font-size: 26px; }
 }
 
 @media print {
